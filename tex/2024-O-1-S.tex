@@ -1,0 +1,251 @@
+\subsection{Round 1 Solutions}\label{S::2024-O-1}
+
+\resph{https://www.youtube.com/watch?v=Iwn4KPxmEpw}{Review by \textit{Way Tan}}
+
+\begin{question}[1540]\label{A::2024-O-1-1}
+    Let $S_k = 1 + 2 + 3 + \cdots + k$ for any positive integer $k$. Find $S_1 + S_2 + S_3 + \cdots + S_{20}$.
+\end{question}
+
+Note that $S_k = \frac12 \bp{k^2 + k}$. Hence, the required sum is \[\sum_{k= 1}^{20} \frac12 \bp{k^2 + k} = \frac12 \bs{\frac{20 \cdot 21 \cdot 41}{6} + \frac{20 \cdot 21}{2}} = 1540.\]
+
+\begin{question}[69]\label{A::2024-O-1-2}
+    Let $S = \sum_{r=1}^{64} r\binom{64}{r}$, where $\binom{n}{r} = \frac{n!}{r! (n-r)!}$ and $0! = 1$. Find $\log_2 S$.
+\end{question}
+
+Note that $(1 + x)^{64} = \sum_{r = 1}^{64} \binom{64}{r} x^{r}$. Differentiating with respect to $x$ gives $64 (1 + x)^{63} = \sum_{r = 1}^{64} r\binom{64}{r} x^{r-1}$. Evaluating at $x = 1$, we have $64 \cdot 2^{63} = \sum_{r = 1}^{64} r \binom{64}{r} = S$. Hence, $\log_2 S = 69$.
+
+\begin{question}[4]\label{A::2024-O-1-3}
+    Let $x$ be the largest number in the interval $[0, 2\pi]$ such that $(\sin x)^{2024} - (\cos x)^{2024} = 1$. Find $\floor{x}$.
+
+    \noindent\textit{(Note: If you think that such a number $x$ does not exist, enter your answer ``99999''.)}
+\end{question}
+
+Observe that $(\sin x)^{2024}, (\cos x)^{2024} \in [0, 1]$. Hence, the equation holds if and only if $(\sin x)^{2024} = 1$ and $(\cos x)^{2024} = 0$. Thus, $\sin x = \pm 1$ and $\cos x = 0$, whence $x = \frac{3\pi}{2}$ and $\floor x = 4$.
+
+\begin{question}[99999]\label{A::2024-O-1-4}
+    Find the number of real numbers $x$ that satisfies the equation $\abs{x - 2} + \abs{x - 3} = \abs{2x - 5}$.
+
+    \noindent\textit{(Note: If you think that there are no such numbers, enter ``0''; if you think that there are infinitely many such numbers, enter ``99999''.)}
+\end{question}
+
+Consider $x < 2$. The given equation simplifies to $(2-x) + (3-x) = 5 - 2x$, whence $x$ is free. There are hence infinitely many solutions.
+
+\clearpage
+\begin{question}[3]\label{A::2024-O-1-5}
+    Among all the real numbers that satisfies the inequality $e^x \geq 1 + 2e^{-x}$, find the minimum value of $\ceil{e^x + e^{-x}}$.
+\end{question}
+
+Multiplying through by $e^x$ yields a quadratic in $e^x$: $\bp{e^x}^2 - e^x - 2 \geq 0$. Thus, $e^x \geq 2$ (keeping in mind that $e^x > 0$). Since $e^x + e^{-x}$ is increasing for $x > 0$, the minimum value occurs when $e^x = 2$, whence the desired answer is $\ceil{2 + 1/2} = 3$.
+
+\begin{question}[2025]\label{A::2024-O-1-6}
+    Find the smallest positive integer $C$ greater than 2024 such that the sets $A = \bc{2x^2 + 2x + C : x \in \ZZ}$ and $B = \bc{x^2 + 2024x + 2: x \in \ZZ}$ are disjoint.
+\end{question}
+
+Observe that $x^2 + 2024x + 2 \equiv 2, 3 \pmod{4}$, while $2x^2 + 2x + C \equiv C \pmod{4}$. Thus, so long as $C \not\equiv 2, 3 \pmod{4}$, we will have $A$ and $B$ disjoint. The smallest such $C$ is hence 2025, which has a residue of 1 modulo 4.
+
+\begin{question}[110]\label{A::2024-O-1-7}
+    Let $ABCD$ be a convex quadrilateral inscribed in a circle $\o$. The bisector of $\angle BAC$ meets $\o$ at $E$ ($\neq A$), the bisector of $\angle ABD$ meets $\o$ at $F$ ($\neq B$), $AE$ intersects $BF$ at $P$ and $CF$ intersects $DE$ at $Q$. Suppose $EF = 20$, $PQ = 11$. Find the area of the quadrilateral $PEQF$.
+\end{question}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate[label=above:$A$] (A) at (0, 4);
+        \coordinate[label=left:$B$] (B) at (-4, 0);
+        \coordinate[label=below right:$C$] (C) at (1.018, -3.868);
+        \coordinate[label=right:$D$] (D) at (3.947, -0.649);
+        \coordinate[label=below left:$E$] (E) at (-2.442, -3.168);
+        \coordinate[label=above right:$F$] (F) at (3.049, 2.589);
+        \coordinate[label=above left:$P$] (P) at (-0.986, 1.107);
+        \coordinate[label=below right:$Q$] (Q) at (1.759, -1.511);
+
+        \draw (0, 0) circle[radius=4];
+        \draw (A) -- (B) -- (C) -- (D) -- (A);
+        \draw (A) -- (E);
+        \draw (B) -- (F);
+        \draw (A) -- (C);
+        \draw (C) -- (F);
+        \draw (D) -- (E);
+        \draw[dashed] (E) -- (F);
+        \draw[dashed] (P) -- (Q);
+        \draw (B) -- (D);
+        \draw[very thick] (E) -- (P) -- (F) -- (Q) -- (E);
+        
+        \draw pic [draw, angle radius=12mm, "$\t$"] {angle = B--A--E};
+
+        \draw pic [draw, angle radius=13mm, "$\t$"] {angle = E--A--C};
+
+        \draw pic [draw, angle radius=13mm, "$\varphi$"] {angle = F--B--A};
+        \draw pic [draw, angle radius=12mm, ""] {angle = F--B--A};
+
+        \draw pic [draw, angle radius=14mm, "$\varphi$"] {angle = D--B--F};
+        \draw pic [draw, angle radius=15mm, ""] {angle = D--B--F};
+
+        \draw pic [draw, angle radius=12mm, "$\t$"] {angle = B--F--E};
+
+        \draw pic [draw, angle radius=13mm, "$\varphi$"] {angle = F--E--A};
+        \draw pic [draw, angle radius=12mm, ""] {angle = F--E--A};
+
+        \draw pic [draw, angle radius=13mm, "$\t$"] {angle = E--F--C};
+
+        \draw pic [draw, angle radius=14mm, "$\varphi$"] {angle = D--E--F};
+        \draw pic [draw, angle radius=15mm, ""] {angle = D--E--F};
+    \end{tikzpicture}
+\end{center}
+
+Let $\angle BAC = 2\t$ and $\angle ABD = 2\varphi$. Using angles in same segment on $ABEF$, we have $\angle BFE = \angle BAE = \t$, and $\angle AEF = \angle ABF = \varphi$. Using angles in same segment on $AECF$, we have $\angle CFE = \angle CAE = \t$. Using angles in same segment on $BEDF$, we have $\angle FBD = \angle FED = \varphi$. By ASA, $\triangle PEF \equiv \triangle QEF$, whence $PEQF$ is a kite. Hence, $[PEQF] = \frac12 \cdot EF \cdot PQ = 110$.
+
+\begin{question}[5]\label{A::2024-O-1-8}
+    Let $f(x) = \sqrt{x^2 + 1} + \sqrt{(4-x)^2 + 4}$. Find the minimum value of $f(x)$.
+\end{question}
+
+Let $A(0, \pm1)$, $B(x, 0)$ and $C(4, \pm2)$. We can interpret  $\sqrt{x^2 + 1}$ and $\sqrt{(4-x)^2 + 4}$ geometrically as $AB$ and $BC$ respectively. It follows that $f(x)$, which is $AB + BC$, attains its minimum when $ABC$ is a straight line (crucially, $B$ must be in between $A$ and $C$). To achieve this, we can set $A(0, -1)$ and $C(4, 2)$. Thus, $\min f(x) = AC = 5$.
+
+\begin{question}[17]\label{A::2024-O-1-9}
+    It is known that $a \geq 0$ satisfies $\sqrt{4 + \sqrt{4 + \sqrt{4 + \sqrt{4 + a}}}} = a$. Find the value of $(2a - 1)^2$.
+\end{question}
+
+Observe that $\sqrt{4 + a} = a$, whence $a^2 - a - 4 = 0$. Thus, \[(2a-1)^2 = 4\bp{a^2 - a - 4} + 17 = 17.\]
+
+\begin{question}[160]\label{A::2024-O-1-10}
+    A rectangle with sides parallel to the horizontal and vertical axes is inscribed in the region bounded by the graph of $y = 60 - x^2$ and the $x$-axis. If the area of the largest such rectangle has area $k\sqrt 5$, find the value of $k$.
+\end{question}
+
+Let $A$ be the area of the rectangle. Let the rectangle have width $2x$. Then $A = 2x\bp{60 - x^2} = 120x - 2x^3$. Hence, $\derx{A}{x} = 120 - 6x^2$. The sole stationary point of $A$ (which can easily be verified as a maximum) hence occurs when $x = 2\sqrt5$. The area of the rectangle is thus $160\sqrt5$, whence $k = 160$.
+
+\begin{question}[10]\label{A::2024-O-1-11}
+    Let $x$ be a real number satisfying the equation $x^{x^5} = 100$. Find the value of $\floor{x^5}$.
+\end{question}
+
+Raising the given equation to the 5th power yields $\bp{x^5}^{x^5} = 10^{10}$, whence $x^5 = 10$.
+
+\begin{question}[10]\label{A::2024-O-1-12}
+    Let $a$, $b$, $c$, $d$, $e$ be distinct integers with $a + b + c + d + e = 9$. If $m$ is an integer such that \[(m-a)(m-b)(m-c)(m-d)(m-e) = 2009,\] determine the value of $m$.
+\end{question}
+
+Note that $2009 = 7^2 \cdot 41$. Since $a$, $b$, $c$, $d$, $e$ are distinct, the five terms must be 7, $-7$, 41, 1 and $-1$. Summing, we get $5m - (a + b + c + d + e) = 41$, whence $m = 10$.
+
+\clearpage
+\begin{question}[3]\label{A::2024-O-1-13}
+    Let $\bc{x}$ be the fractional part of the number $x$, i.e., $\bc{x} = x - \floor{x}$. If $S = \int_0^9 \bc{x}^2 \d x$, find $\floor{S}$.
+\end{question}
+
+Observe that $\bc{x}$ has period 1, and is equivalent to $x$ on the interval $[0, 1)$. Thus, \[S = \int_0^9 \bc{x}^2 \d x = 9 \int_0^1 x^2 \d x = 3.\]
+
+\begin{question}[81]\label{A::2024-O-1-14}
+    The solution of the inequality $\abs{(x+1)(x-6)} > \abs{(x+4)(x-2)}$ can be expressed as $x < a$ or $b < x < c$. If $S = \abs{a} + \abs{b} + \abs{c}$, find $\floor{14S}$.
+\end{question}
+
+As we are interested in the extreme ends of the solution range, we consider the case of equality, i.e. $\abs{(x+1)(x-6)} = \abs{(x+4)(x-2)}$.
+
+\case{1} Consider $(x+1)(x-6) = (x+4)(x-2)$. Expanding and simplifying, we get $x = 2/7$.
+
+\case{2} Consider $(x+1)(x-6) = -(x+4)(x-2)$. Expanding and simplifying, we get $(2x-7)(x+2) = 0$, whence $x = -2$ and $x = 7/2$.
+
+Together, it stands to reason that $a = -2$, $b = 2/7$ and $c = 7/2$, whence $14S = 81$.
+
+\begin{question}[2]\label{A::2024-O-1-15}
+    Given that $x, y > 0$ and $x\sqrt{2-y^2} + y\sqrt{2-x^2} = 2$, find the value of $x^2 + y^2$.
+\end{question}
+
+\sol{1} Let $X = x^2$ and $Y = y^2$. Squaring the given equation, we have \[X(2-Y) + 2xy\sqrt{(2-X)(2-Y)} + Y(2-X) = 4.\] This gives \[xy\sqrt{(2-X)(2-Y)} = 2 - (X+Y) + XY.\]Squaring once more, we obtain \[XY(2-X)(2-Y) = \bs{2 - (X+Y) + XY}^2.\] Upon simplification, one gets \[(X+Y)^2 - 4(X+Y) + 4 = 0,\] whence $x^2 + y^2 = X + Y = 2$.
+
+\sol{2}[Abusing uniqueness] Suppose $x = y$. We thus get $x\sqrt{2- x^2} = 1$, whence $x = y = 1$. Since $x^2 + y^2$ is a constant (by the way the question is asked), we have $x^2 + y^2 = 2$.
+
+\clearpage
+\begin{question}[17]\label{A::2024-O-1-16}
+    A convex polygon has $n$ sides such that no three diagonals are concurrent. It is known that all its diagonals divide the polygon into 2500 regions. Determine $n$.
+\end{question}
+
+Let $P$ be a convex polygon with $n$ sides such that no three diagonals are concurrent. By Euler's formula, we have \[V - E + F = 1,\] where $V$, $E$ and $F$ are the number of vertices, edges and faces of $P$ respectively. Note that we disregard the region ``outside'' $P$. Observe that any four of the $n$ vertices of $P$ gives a unique vertex in the interior of $P$. Hence, $V = n + \binom{n}{4}$. Next, observe that each vertex of $P$ has degree $n-1$, while each vertex in the interior of $P$ has degree 4. By the degree sum formula, $2E = n(n-1) + 4\binom{n}{4}$. We hence obtain the following expression for $F$: \[F = \binom{n}{4} + \frac{n(n-3)}2 + 1.\] Setting $F = 2500$, we see that $n = 17$.
+
+\begin{question}[4]\label{A::2024-O-1-17}
+    Find the number of integers $n$ between $-2029$ and 2029 inclusive such that $(n+2)^2 + n^2$ is divisible by 2029.
+\end{question}
+
+Re-expressing the given condition in the language of modular arithmetic, we get $(n+2)^2 + n^2 \equiv 0 \pmod{2029}$. Simplifying, we obtain \[(n+1)^2 \equiv -1 \pmod{2029}.\tag{1}\] Now observe that \[\legendre{-1}{2029} = (-1)^{\frac{2029-1}{2}} = 1,\] where $\legendre{a}{p}$ is the Legendre symbol of $a$ and $p$. We have hence established that $-1$ is a quadratic residue modulo 2029 (i.e. there exists some integer $m$ such that $m^2 \equiv -1 \pmod{2029}$). There are hence two integer solutions to (1). However, since the solutions are 2029-periodic, we get a total of 4 solutions.
+
+\begin{question}[2516]\label{A::2024-O-1-18}
+    Let $f$ be a function such that for any real number $x$, we have $f(x) + 2f(2-x) = x + x^2$. Find the value of $f(1) + f(2) + f(3) + \cdots + f(34)$.
+\end{question}
+
+Let $S = \sum_{n=1}^{34} f(n)$ and $T = \sum_{n=-32}^1 f(n)$. From the given equation, we have \[S + 2T = \sum_{n=1}^{34} \bp{n + n^2}. \tag{1}\] Now consider the transformation $x \mapsto 2-x$. We get $f(2-x) + 2f(x) = (2-x) + (2-x)^2$. Hence, \[T + 2S = \sum_{n=1}^{34} \bs{(2-n) + (2-n)^2}. \tag{2}\] Simultaneously solving (1) and (2) yields \[S = \frac13 \sum_{n=1}^{34} \bp{2\bs{(2-n) + (2-n)^2} - (n + n^2)} = 2516.\]
+
+\begin{question}[761]\label{A::2024-O-1-19}
+    Find the largest possible positive prime integer $p$ such that $p$ divides \[S(p) = 1^{p-2} + 2^{p-2} + 3^{p-2} + 4^{p-2} + 5^{p-2} + 6^{p-2} + 7^{p-2} + 8^{p-2}.\]
+\end{question}
+
+Multiplying $S(p)$ through by $8!$ yields \[\frac{8!}{1} \cdot 1^{p-1} + \frac{8!}{2} \cdot 2^{p-1} + \cdots + \frac{8!}{8} \cdot 8^{p-1}\equiv 0 \pmod{p}.\] However, Fermat's little theorem states that $a^{p-1} \equiv 1 \pmod{p}$ for all natural numbers $a$ such that $p \nmid a$. Assuming that $p > 8$, we have that \[\frac{8!}{1} + \frac{8!}{2} + \cdots + \frac{8!}{8} \equiv 0 \pmod{p}.\] The LHS works out to be $109584 = 2^4 \cdot 3^2 \cdot 761$. Hence, the largest possible $p$ is 761.
+
+\begin{question}[1009]\label{A::2024-O-1-20}
+    Let $f$ be a function such that $f(x) + f(\frac{1}{1-x}) = 1 + \frac1x$ for all $x \notin \bc{0, 1}$. Find the value of $\floor{180 \cdot f(10)}$.
+\end{question}
+
+Substituting $x = 10$, we get \[f(10) + f(-\tfrac19) = \frac{11}{10}.\] Substituting $x = -\frac19$, we get \[f(-\tfrac19) + f(\tfrac9{10}) = -8.\] Substituting $x = \frac9{10}$, we get \[f(\tfrac9{10}) + f(10) = \frac{19}9.\] Solving the three equations simultaneously, we get $180 \cdot f(10) = 1009$.
+
+\begin{question}[2]\label{A::2024-O-1-21}
+    Let $C$ be a circle with equation $(x-a)^2 + (y-b)^2 = r^2$, where at least one of the $a$ and $b$ are irrational numbers. Find the maximum possible numbers of points $(p,q)$ on $C$ where both $p$ and $q$ are rational numbers.
+\end{question}
+
+Observe that it is possible for a circle with ``irrational centre'' to have two rational points. For instance, the circle with centre $(0, \sqrt2)$ and radius 3 contains the rational points $(-1, 0)$ and $(1, 0)$. 
+
+We now show that three or more rational points is possible only if the coordinates of the centre of the circle are rational. Suppose there exists a circle with three rational points ($P$, $Q$ and $R$). Then the gradients of chords $PQ$ and $QR$ are rational. Thus, the gradients of the perpendicular bisector of $PQ$ and $QR$ are also rational. It follows that the equation of the perpendicular bisector of $PQ$ and $QR$ have rational coefficients. However, the perpendicular bisectors of any two chords must meet in the centre, implying that the coordinates of the centre are rational. This concludes the proof.
+
+\begin{question}[24]\label{A::2024-O-1-22}
+    On the plane there are 2024 points coloured either red or blue such that each red point is the centre of a circle passing through 3 blue points. Determine the least number of blue points.
+\end{question}
+
+Let there be $b$ blue points. Observe that the absolute maximum number of red points is equal to the number of triplets of blue points (each triplet uniquely defines a red point). That is, there are at most $\binom{b}{3}$ red points. We thus require $\binom{b}{3} + b \geq 2024$. The smallest $b$ that satisfies this is $b = 24$.
+
+\begin{question}[45]\label{A::2024-O-1-23}
+    It is given that the positive real numbers $x_1, \ldots, x_{2026}$ satisfy $\dfrac{x_1^2}{x_1^2 + 1} + \cdots + \dfrac{x_{2026}^2}{x_{2026}^2 + 1} = 2025$. Find the maximum value of $\dfrac{x_1}{x_1^2 + 1} + \cdots + \dfrac{x_{2026}}{x_{2026}^2 + 1}$.
+\end{question}
+
+\sol{1} From the given equation, we see that \[\sum_{n=1}^{2026} \bp{1 - \frac1{x_n^2 +1}} = 2025 \implies \sum_{n=1}^{2026} \frac1{x_n^2 + 1} = 1.\] By the Cauchy-Schwarz inequality, one thus has \[\bp{\sum_{n=1}^{2026} \frac{x_n}{x_n^2 + 1}}^2 \leq \bs{\sum_{n=1}^{2026} \bp{\frac{x_n}{\sqrt{x_n^2 + 1}}}^2} \bs{\sum_{n=1}^{2026} \bp{\frac{1}{\sqrt{x_n^2 + 1}}}^2} = 2025.\] The maximum is thus 45.
+
+\sol{2}[Abusing symmetry] Observe that the given expressions are all symmetric polynomials. Letting $x_1 = x_2 = x_3 = \cdots = x_{2026}$, one gets that $2026 \cdot \frac{x_i^2}{x_i^2 + 1} = 2025$, whence $x_i^2 + 1 = 2026$ and $x_i = 45$. Thus, the expression in question evaluates to $2026 \cdot \frac{45}{2026} = 45$. 
+
+\begin{question}[441]\label{A::2024-O-1-24}
+    Let $n$ denote the number of ways of arranging all the letters of the word MATHEMATICS in one row such that
+    \begin{itemize}
+        \item both M's precede both T's; and
+        \item neither the two M's nor the two T's are next to each other.
+    \end{itemize}
+    Determine the value of $\frac{n}{6!}$.
+\end{question}
+
+To ensure that both M's are both T's are not adjacent to each other, we consider the second M and the letter in front of it as one group, and the first T and the letter after it as one group. This gives a total of 9 groups. Since there are 4 groups with M's and T's, we have $\binom{9}{4}$ ways to arrange the M's and T's. Meanwhile, there are $\frac{7!}{2!}$ ways to arrange the remaining letters (note that we divide by $2!$ to account for the double A). Hence, $n = \binom{9}{4} \cdot \frac{7!}{2!}$, whence $\frac{n}{6!} = 441$.
+
+\begin{question}[146]\label{A::2024-O-1-25}
+    The incircle of the triangle $ABC$ centred at $I$ touches the sides $BC$, $CA$, $AB$ at $D$, $E$, $F$ respectively. Let $D'$ be the intersection of the extension of $ID$ with the circle through $B$, $I$, $C$; $E'$ be the intersection of the extension of $IE$ with the circle through $A$, $I$, $C$; and $F'$ the intersection of the extension of $IF$ with the circle through $A$, $I$, $B$. Suppose $AB = 52$, $BC = 56$, $CA = 60$. Find $DD' + EE' + FF'$.
+\end{question}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate[label=above:$A$] (A) at (0.584, 3.798);
+        \coordinate[label=below right:$B$] (B) at (3, -2);
+        \coordinate[label=below left:$C$] (C) at (-4.300, -2);
+        \coordinate[label=below:$D$] (D) at (0, -2);
+        \coordinate[label=above left:$E$] (E) at (-1.529, 1.289);
+        \coordinate[label=above right:$F$] (F) at (1.846, 0.769);
+        \coordinate[label=above:$I$] (I) at (0, 0);
+
+        \draw (I) circle[radius=2];
+        \draw (A) -- (B) -- (C) -- (A);
+        \draw[dashed] (I) -- (D);
+        \draw[dashed] (I) -- (E);
+        \draw[dashed] (I) -- (F);
+
+        \node[anchor=south, rotate=50] at ($(A)!0.5!(E)$) {$s-a$};
+        \node[anchor=south, rotate=50] at ($(C)!0.5!(E)$) {$s-c$};
+        \node[anchor=north] at ($(C)!0.5!(D)$) {$s-c$};
+        \node[anchor=north] at ($(B)!0.5!(D)$) {$s-b$};
+        \node[anchor=south, rotate=-67] at ($(A)!0.5!(F)$) {$s-a$};
+        \node[anchor=south, rotate=-67] at ($(F)!0.5!(B)$) {$s-b$};
+    \end{tikzpicture}
+\end{center}
+
+It is a well-known property that the points tangents to the incircle divide the triangle into lengths of $s-a$, $s-b$, $s-c$, as shown in the figure above. Here, $s$ is the semiperimeter $\frac12(a+b+c)$, $a = BC$, $b = CA$ and $c = AB$.
+
+From Heron's formula, one has $[ABC] = \sqrt{s(s-a)(s-b)(s-c)}$. Thus, the inradius $r$ is given by $r = \frac1s \sqrt{s(s-a)(s-b)(s-c)}$.
+
+We now formulate equations involving $DD'$, $EE'$ and $FF'$. Invoking the power of a point theorem in the circumcircle of $\triangle BIC$, one has $(s-c)(s-b) = r \cdot DD'$. Likewise, we obtain the formulae $(s-c)(s-a) = r \cdot EE'$ and $(s-a)(s-b) = r \cdot FF'$. Thus, \[DD' + EE' + FF' = \frac{(s-a)(s-b) + (s-b)(s-c) + (s-c)(s-a)}r = 146.\]
