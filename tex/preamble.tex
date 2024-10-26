@@ -159,18 +159,23 @@
 
 % \end{Resource Boxes}
 
-% \begin{Enum Links}
+% \begin{Math Commands}
+% Most commands taken from echw.sty
+
+% \begin{Misc}
+
+% Only clearpage before and after a part
+\newcommand{\partx}[1]{\cleardoubleoddpage\part{#1}\cleardoubleoddpage}
+
+% Enum links
 \makeatletter
 \newcommand{\hyperrefitem}[1][]{%
 \stepcounter{\@enumctr}%
 \item[{\hyperref[#1]{\csname label\@enumctr\endcsname}}]
 }
 \makeatother
-% \end{Enum Links}
 
-% \begin{Math Commands}
-% Most commands taken from echw.sty
-
+% \end{Misc}
 % -- LINEAR ALGEBRA --
 
 % Boldface Vectors

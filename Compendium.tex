@@ -1,4 +1,4 @@
-\documentclass[a4paper, listof=totoc,bibliography=totoc,]{scrbook}
+\documentclass[a4paper,listof=totoc,bibliography=totoc,openany]{scrbook}
 
 \input{tex/preamble}
 
@@ -7,59 +7,64 @@
 \author{Eytan Chong}
 \date{v0.1.\datetwo}
 
+\usepackage{etoolbox}
+\pretocmd{\subsection}{%
+  \ifnum\value{subsection}=0 \else\clearpage\fi
+}{}{}
+
 \begin{document}
 \maketitle
 \tableofcontents
 
 \input{tex/introduction}
 
-\part{Problems}
+\partx{Problems}
 
 \chapter{2020 SMO}
 \section{Open Section}
-\input{tex/2020-O-1-P}
+\input{tex/2020/Open/Round 1/2020-O-1-P}
 
 \chapter{2021 SMO}
 \section{Open Section}
-\input{tex/2021-O-1-P}
+\input{tex/2021/Open/Round 1/2021-O-1-P}
 
 \chapter{2022 SMO}
 \section{Open Section}
-\input{tex/2022-O-1-P}
-\input{tex/2022-O-2-P}
+\input{tex/2022/Open/Round 1/2022-O-1-P}
+\input{tex/2022/Open/Round 2/2022-O-2-P}
 
 \chapter{2023 SMO}
 \section{Open Section}
-\input{tex/2023-O-1-P}
-\input{tex/2023-O-2-P}
+\input{tex/2023/Open/Round 1/2023-O-1-P}
+\input{tex/2023/Open/Round 2/2023-O-2-P}
 
 \chapter{2024 SMO}
 \section{Open Section}
-\input{tex/2024-O-1-P}
-\input{tex/2024-O-2-P}
+\input{tex/2024/Open/Round 1/2024-O-1-P}
+\input{tex/2024/Open/Round 2/2024-O-2-P}
 
-\part{Solutions}
+\partx{Solutions}
 
 \chapter{2020 SMO}
 \section{Open Section}
-\input{tex/2020-O-1-S}
+\input{tex/2020/Open/Round 1/2020-O-1-S}
 
 \chapter{2021 SMO}
 \section{Open Section}
-\input{tex/2021-O-1-S}
+\input{tex/2021/Open/Round 1/2021-O-1-S}
 
 \chapter{2022 SMO}
 \section{Open Section}
-\input{tex/2022-O-1-S}
-\input{tex/2022-O-2-S}
+\input{tex/2022/Open/Round 1/2022-O-1-S}
+\input{tex/2022/Open/Round 2/2022-O-2-S}
 
 \chapter{2023 SMO}
 \section{Open Section}
-\input{tex/2023-O-1-S}
-\input{tex/2023-O-2-S}
+\input{tex/2023/Open/Round 1/2023-O-1-S}
+\input{tex/2023/Open/Round 2/2023-O-2-S}
 
 \chapter{2024 SMO}
 \section{Open Section}
-\input{tex/2024-O-1-S}
-\input{tex/2024-O-2-S}
+\input{tex/2024/Open/Round 1/2024-O-1-S}
+\input{tex/2024/Open/Round 2/2024-O-2-S}
 \end{document}
