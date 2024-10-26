@@ -1,0 +1,50 @@
+\subsection{Round 1 Problems}
+
+Solutions can be found in Section~\ref{S::2020-O-1}.
+
+\begin{enumerate}
+    \hyperrefitem[A::2020-O-1-1] If $S$ is the sum of all the \textit{real} roots of the equation $x^2 + \dfrac{1}{x^2} = 2020^2 + \dfrac{1}{2020^2}$ find $\floor{S}$.
+    \hyperrefitem[A::2020-O-1-2] Find the largest positive integer $x$ that satisfies the equation \[(\floor{x} - 2020)^2 + (\ceil{x} - 2030)^2 = (\floor{x} - \ceil{x} + 10)^2.\]
+
+    \textit{(Note: If you think that the above equation has no solution in the positive integers, enter your answer as ``0''.)}
+    \hyperrefitem[A::2020-O-1-3] Let $S_n = \dfrac1{1 \times 3} + \dfrac{1}{3 \times 5} + \dfrac1{5 \times 7} + \cdots + \dfrac{1}{(2n-1) \times (2n+1)}$. Find the value of $n$ such that $S_n$ takes the value of 0.48.
+    \hyperrefitem[A::2020-O-1-4] Given that the three planes in the Cartesian space with equations $2x + 4y + 6z = 5$, $3x + 5y + 2z = 6$ and $8x + 14y + az = b$ have a common line of intersection, find the value of $a + b$.
+    \hyperrefitem[A::2020-O-1-5] Let $i$ be the complex number $\sqrt{-1}$, and $n$ be the smallest positive integer such that $(\sqrt3 + i)^n = a$, where $a$ is a real number. Find the value of $\floor{n-a}$.
+    \hyperrefitem[A::2020-O-1-6] In the three-dimensional Cartesian space, let $\vec i$, $\vec j$ and $\vec k$ denote unit vectors along three mutually perpendicular $x$, $y$ and $z$-axes respectively. Three straight lines $l_1$, $l_2$ and $l_3$ have equations defined by
+    \begin{alignat*}{2}
+        l_1 && : \vec r &= (4 + \l)\vec i + (5 + \l)\vec j + (6 + \l)\vec k,\\
+        l_2 && : \vec r &= (4 + 3\m)\vec i + (5 - \m)\vec j + (6 - 2\m) \vec k,\\
+        l_3 && : \vec r &= (1 + 6\n)\vec i + (2 + 2\n) \vec j + (3 + \n) \vec k,
+    \end{alignat*}
+    where $\m$, $\l$ and $\n$ are real numbers. If the area of the triangle enclosed by the three lines $l_1$, $l_2$ and $l_3$ is denoted by $S$, find the value of $10S^2$.
+    \hyperrefitem[A::2020-O-1-7] Given that $f : \RR \to \RR$ such that \[f(a^2 - b^2) = (a-b)(f(a) + f(b))\] for all real numbers $a$ and $b$, and that $f(1) = \dfrac1{101}$, find the value of $\displaystyle\sum_{k=1}^{100} f(k)$.
+    \hyperrefitem[A::2020-O-1-8] Find the sum of all the positive integers $n$ such that $n^4 - 4n^3 + 22n^2 - 36n + 18$ is a perfect square.
+
+    \textit{(Note: If you think that there are infinitely many such positive integers $n$ that satisfy that above conditions, enter your answer as ``9999''.)}
+    \hyperrefitem[A::2020-O-1-9] Assume that \[(x+2+m)^{2019} = a_0 + a_1 (x+1) + a_2 (x+1)^2 + \cdots + a_{2019}(x+1)^{2019}.\] Find the largest possible integer $m$ such that \[(a_0 + a_2 + a_4 + \cdots + a_{2018})^2 - (a_1 + a_3 + a_5 + \cdots + a_{2019})^2 \leq 2020^{2019}.\]
+    \hyperrefitem[A::2020-O-1-10] Given that $S = \displaystyle\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{\sqrt{n(n+k)}}$, find the value of $\floor{(S+2)^2}$.
+    \hyperrefitem[A::2020-O-1-11] Let $A = \bc{1, 2, \cdots, 10}$. Count the number of ordered pairs $(S_1, S_2)$, where $S_1$ and $S_2$ are non-intersecting and non-empty subsets of $A$ such that the largest number in $S_1$ is smaller than the smallest number in $S_2$. For example, if $S_1 = \bc{1, 4}$ and $S_2 = \bc{5, 6, 7}$, then $(S_1, S_2)$ is such an ordered pair.
+    \hyperrefitem[A::2020-O-1-12] Each cell of a $2020 \times 2020$ table is filled with a number which is either 1 or $-1$. For $u - 1, \ldots, 2020$, let $R_i$ be the product of all the numbers in the $i$th row and let $C_i$ be the product of all the numbers in the $i$th column. Suppose $R_i + C_i = 0$ for all $i = 1, \ldots, 2020$. What is the least number of $-1$'s in the table?
+    \hyperrefitem[A::2020-O-1-13] Assume that the sequence $\bc{a_k}_{k=1}^\infty$ follows an arithmetic progression with $a_2 + a_4 + a_9 = 24$. Find the maximum value of $S_8 \times S_{10}$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$.
+    \hyperrefitem[A::2020-O-1-14] Consider all functions $g : \RR \to \RR$ satisfying the conditions that
+    \begin{enumerate}
+        \item $\abs{g(a) - g(b)} \leq \abs{a - b}$ for any $a, b \in \RR$;
+        \item $g(g(g(0))) = 0$.
+    \end{enumerate}
+    Find the \textit{largest} possible value of $g(0)$.
+    \hyperrefitem[A::2020-O-1-15] A sequence $\bc{a_i}_{i=1}^\infty$ is called a \textit{good} sequence if $\dfrac{S_{2n}}{S_n}$ is a constant for all $n \geq 1$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$. Suppose it is known that the sequence $\bc{a_i}_{i = 1}^\infty$ is a \textit{good} sequence that follows an arithmetic progression. Determine $a_{2020}$ if $a_1 = 1 \neq a_2$.
+    \hyperrefitem[A::2020-O-1-16] Determine the smallest positive integer $p$ such that the system \[\left\{
+        \begin{aligned}
+            6x + 4y + 3z &= 0\\
+            4xy + 2yz + pxz &= 0
+        \end{aligned}\right.\] has more the one set of real solutions in $x$, $y$, $z$.
+    \hyperrefitem[A::2020-O-1-17] Let $ABC$ be a triangle with $a = BC$, $b = AC$ and $c = AB$. It is given that $c = 100$ and \[\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43.\] Let $P$ be a point on the inscribed circle of $\triangle ABC$. Find the maximum value of \[PA^2 + PB^2 + PC^2.\]
+    \hyperrefitem[A::2020-O-1-18] Find the largest positive integer $n$ less than 2020 such that $\binom{n-1}{k} - (-1)^k$ is divisible by $n$ for $k = 0, 1, \ldots, n-1$.
+    \hyperrefitem[A::2020-O-1-19] Assume that $\bc{a_k}_{k=1}^\infty$ is a sequence with the property that for any distinct positive integers $m$, $n$, $p$, $q$ with $m + n = p + q$, the following equality always holds: \[\frac{a_m + a_n}{(a_m + 1)(a_n + 1)} = \frac{a_p + a_q}{(a_p + 1)(a_q + 1)}.\] Given $a_1 = 0$ and $a_2 = \dfrac12$, determine $\dfrac1{1 - a_5}$.
+    \hyperrefitem[A::2020-O-1-20] In the triangle $ABC$, the incircle touches the sides $BC$, $CA$, $AB$ at $D$, $E$, $F$ respectively. The line segments $ED$ and $AB$ are extended to intersect at $P$ such that $AB = BP = PD$. Suppose $CA = 9$. Find the value of $[ABC]^2$, where $[ABC]$ is the area of the triangle $ABC$.
+    \hyperrefitem[A::2020-O-1-21] In an acute-angled triangle $ABC$, $AB = 75$, $AC = 53$, the external bisector of $\angle A$ on $CA$ produced meets the circumcircle of triangle $ABC$ at $E$, and $F$ is the foot of the perpendicular from $E$ onto $AB$. Find the value of $AF \times FB$.
+    \hyperrefitem[A::2020-O-1-22] Let $\bc{a_k}_{k=1}^\infty$ be an increasing sequence with $a_k < a_{k+1}$ for all $k = 1, 2, 3, \cdots$ formed by arranging all the terms in the set $\bc{2^r + 2^s + 2^t : 0 \leq r < s < t}$ in increasing order. Find the largest value of the integer $n$ such that $a_n \leq 2020$.
+    \hyperrefitem[A::2020-O-1-23] Let $n$ be a positive integer and $S$ be the set of all numbers that can be written in the form $\displaystyle\sum_{i = 2}^k a_{i-1}a_i$ with $a_1, \ldots, a_k$ being positive integers that sum to $n$. Suppose the average value of all the numbers in $S$ is 88199. Determine $n$.
+    \hyperrefitem[A::2020-O-1-24] Let $x$, $y$, $z$ and $w$ be real numbers such that $x + y + z + w = 5$. Find the minimum value of $(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2$.
+    \hyperrefitem[A::2020-O-1-25] Let $p$ and $q$ be positive integers satisfying the equation $p^2 + q^2 = 3994(p-q)$. Determine the largest possible value of $q$.
+\end{enumerate}
