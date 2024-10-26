@@ -175,6 +175,12 @@
 }
 \makeatother
 
+% Force clearpage in front of subsections
+\usepackage{etoolbox}
+\pretocmd{\subsection}{%
+  \ifnum\value{subsection}=0 \else\clearpage\fi
+}{}{}
+
 % \end{Misc}
 % -- LINEAR ALGEBRA --
 
