@@ -213,12 +213,12 @@ Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angl
         \coordinate[label=below right:$E$] (E) at (4.28753, -2.5724);
         \coordinate[label=above left:$F$] (F) at (3.668, 1.364);
 
-        \draw (0, 0) circle[radius=5];
+        \draw[dashed] (0, 0) circle[radius=5];
         \draw (A) -- (B) -- (C) -- (A);
         \draw (A) -- (E);
-        \draw (A) -- (D) -- (E);
-        \draw (C) -- (E) -- (B);
-        \draw (E) -- (F);
+        \draw (A) -- (D);
+        \draw[blue] (F) -- (E) -- (D);
+        \draw[red] (C) -- (E) -- (B);
 
         \draw pic [draw, angle radius=3mm, ""] {right angle = A--F--E};
         \draw pic [draw, angle radius=3mm, ""] {right angle = A--D--E};
