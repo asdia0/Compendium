@@ -83,15 +83,14 @@ Let the largest element of $S_1$ be $k$. There are $2^{k-1}$ ways to choose $S_1
     Each cell of a $2020 \times 2020$ table is filled with a number which is either 1 or $-1$. For $u - 1, \ldots, 2020$, let $R_i$ be the product of all the numbers in the $i$th row and let $C_i$ be the product of all the numbers in the $i$th column. Suppose $R_i + C_i = 0$ for all $i = 1, \ldots, 2020$. What is the least number of $-1$'s in the table?
 \end{question}
 
-Let $a_{ij}$ represent the number in the cell in the $i$th row and $j$th column. Observe that $R_i = \prod_{n = 1}^{2020} a_{in}$ and $C_i = \prod_{n=1}^{2020} a_{ni}$. Then \[R_i + C_i = \prod_{n = 1}^{2020} a_{in} + \prod_{n=1}^{2020} a_{ni} = a_{ii} \bp{\prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{in} + \prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{ni}} = 0.\] Since we want to minimize the number of $-1$s, we take $a_{ii} = 1$ for all $i = 1, \ldots, 2020$. Furthermore, we have \[\prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{in} = -\prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{ni}.\] The number of $-1$s in the two products hence differ by an odd number. In the optimal case, one product has no $-1$s, while the other has one $-1$. We now construct a grid with such a property. Let $a_{ij} = -1$ if $(i, j) \in \bc{(1, 2), (3, 4), \ldots, (2019, 2020)}$, and $a_{ij} = 1$ otherwise. It is quite clear that \[\prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{in} = \begin{cases}
+Let $a_{ij}$ represent the number in the cell in the $i$th row and $j$th column. Observe that $R_i = \prod_{n = 1}^{2020} a_{in}$ and $C_i = \prod_{n=1}^{2020} a_{ni}$. Then \[\prod_{n = 1}^{2020} a_{in} = -\prod_{n=1}^{2020} a_{ni}.\] The number of $-1$s in the two products hence differ by an odd number. In the optimal case, one product has no $-1$s, while the other has one $-1$. We now construct a grid with such a property. Let $a_{ij} = -1$ if $(i, j) \in \bc{(1, 2), (3, 4), \ldots, (2019, 2020)}$, and $a_{ij} = 1$ otherwise. It is quite clear that \[\prod_{n = 1}^{2020} a_{in} = \begin{cases}
     1, & i \text{ odd}\\
     -1, & i \text{ even}
-\end{cases}, \qquad \prod_{\substack{n = 1\\ n \neq i}}^{2020} a_{ni} = \begin{cases}
+\end{cases}, \qquad \prod_{n = 1}^{2020} a_{ni} = \begin{cases}
     -1, & i \text{ odd}\\
     1, & i \text{ even}
 \end{cases},\] whence $R_i + C_i = 0$ for $i = 1, \ldots, 2020$ as desired. Thus, the least number of $-1$s is $\abs{\bc{(1, 2), (3, 4), \ldots, (2019, 2020)}} = 1010$.
 
-\clearpage
 \begin{question}[5120]\label{A::2020-O-1-13}
     Assume that the sequence $\bc{a_k}_{k=1}^\infty$ follows an arithmetic progression with $a_2 + a_4 + a_9 = 24$. Find the maximum value of $S_8 \times S_{10}$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$.
 \end{question}
@@ -107,7 +106,7 @@ Let $a_k = a_1 + (k-1)d$. From the given equation, we immediately have $3a_1 + 1
     Find the \textit{largest} possible value of $g(0)$.
 \end{question}
 
-Let $a = x+h$ and $b = x$. From the first condition, we get \[\frac{\abs{g(x+h) - g(x)}}{h} \leq 1 \implies \abs{g'(x)} \leq 1.\] Now consider the fixed point iteration $x_{n+1} = g(x_n)$, which must converge to the root of $g(x) = x$ since $\abs{g(x)} \leq 1$. The second condition states that if $x_n = 0$, then $x_{n+3} = x_n = 0$. This immediately implies that $x = 0$ is a root of $g(x) = x$, whence $g(0) = 0$.
+Let $a = x+h$ and $b = x$. From the first condition, we get \[\frac{\abs{g(x+h) - g(x)}}{h} \leq 1 \implies \abs{g'(x)} \leq 1.\] Now consider the fixed point iteration $x_{n+1} = g(x_n)$, which must converge to the root of $g(x) = x$ since $\abs{g'(x)} \leq 1$. The second condition states that if $x_n = 0$, then $x_{n+3} = x_n = 0$. This immediately implies that $x = 0$ is a root of $g(x) = x$, whence $g(0) = 0$.
 
 \begin{question}[4039]\label{A::2020-O-1-15}
     A sequence $\bc{a_i}_{i=1}^\infty$ is called a \textit{good} sequence if $\dfrac{S_{2n}}{S_n}$ is a constant for all $n \geq 1$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$. Suppose it is known that the sequence $\bc{a_i}_{i = 1}^\infty$ is a \textit{good} sequence that follows an arithmetic progression. Determine $a_{2020}$ if $a_1 = 1 \neq a_2$.
@@ -129,7 +128,7 @@ From the first equation, we have $6x = -4y - 3z$. Multiplying the second equatio
     Let $ABC$ be a triangle with $a = BC$, $b = AC$ and $c = AB$. It is given that $c = 100$ and \[\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43.\] Let $P$ be a point on the inscribed circle of $\triangle ABC$. Find the maximum value of \[PA^2 + PB^2 + PC^2.\]
 \end{question}
 
-Since $\frac{\cos A}{\cos B} = \frac43$, $\triangle ABC$ is congruent to a 3-4-5 right triangle, where $\angle C = 90\deg$. Since $c = 100 = 20 \cdot 5$, we have $a = 20 \cdot 3 = 60$ and $b = 20 \cdot 4 = 80$. Let $C(0,0)$. Then $A(80, 0)$ and $B(0, 60)$. Note that the incircle of $\triangle ABC$ has radius $20 \cdot 1 = 20$ and centre $(20, 20)$. Let $(x, y)$ be a point on the incircle, i.e. \[(x-20)^2 + (y-20)^2 = 20^2.\implies x^2 + y^2 = 40x + 40y - 20^2 \tag{1}.\] We thus aim to maximize \[PA^2 + PB^2 + PC^2 = \bs{(x-80)^2 + y^2} + \bs{x^2 + (y-60)^2} + \bs{x^2 + y^2}.\] Expanding and using (1), we get \[PA^2 + PB^2 + PC^2 = -40x + 8800.\] Since $x \geq 0$, the maximum value of $PA^2 + PB^2 + PC^2$ is 8800.
+Since $\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43$, $\triangle ABC$ is congruent to a 3-4-5 right triangle, where $\angle C = 90\deg$. Since $c = 100 = 20 \cdot 5$, we have $a = 20 \cdot 3 = 60$ and $b = 20 \cdot 4 = 80$. Let $C(0,0)$. Then $A(80, 0)$ and $B(0, 60)$. Note that the incircle of $\triangle ABC$ has radius $20 \cdot 1 = 20$ and centre $(20, 20)$. Let $(x, y)$ be a point on the incircle, i.e. \[(x-20)^2 + (y-20)^2 = 20^2.\implies x^2 + y^2 = 40x + 40y - 20^2 \tag{1}.\] We thus aim to maximize \[PA^2 + PB^2 + PC^2 = \bs{(x-80)^2 + y^2} + \bs{x^2 + (y-60)^2} + \bs{x^2 + y^2}.\] Expanding and using (1), we get \[PA^2 + PB^2 + PC^2 = -40x + 8800.\] Since $x \geq 0$, the maximum value of $PA^2 + PB^2 + PC^2$ is 8800.
 
 \begin{question}[2017]\label{A::2020-O-1-18}
     Find the largest positive integer $n$ less than 2020 such that $\binom{n-1}{k} - (-1)^k$ is divisible by $n$ for $k = 0, 1, \ldots, n-1$.
@@ -156,7 +155,6 @@ Thus, the largest $n$ is 2017.
 
 Let $m = 1$, $n = 3$, and $p = q = 2$. Using the given equation and conditions, we get \[\frac{a_1 + a_3}{(a_1 + 1)(a_3 + 1)} = \frac{a_2 + a_2}{(a_2 + 1)(a_2 + 1)} \implies a_3 = \frac45.\] Let $m = 1$, $n = 5$, $p = q = 3$. Once again, using the given equation and conditions, we get \[\frac{a_1 + a_5}{(a_1 + 1)(a_5 + 1)} + \frac{a_3 + a_3}{(a_3 + 1)(a_3 + 1)} \implies a_5 = \frac{40}{41}.\] Thus, $\frac{1}{1 - a_5} = 41$.
 
-\clearpage
 \begin{question}[140]\label{A::2020-O-1-20}
     In the triangle $ABC$, the incircle touches the sides $BC$, $CA$, $AB$ at $D$, $E$, $F$ respectively. The line segments $ED$ and $AB$ are extended to intersect at $P$ such that $AB = BP = PD$. Suppose $CA = 9$. Find the value of $[ABC]^2$, where $[ABC]$ is the area of the triangle $ABC$.
 \end{question}
@@ -205,13 +203,13 @@ Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angl
 \end{question}
 
 \begin{center}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.6]
         \coordinate[label=above right:$A$] (A) at (4.758, 1.535);
         \coordinate[label=left:$B$] (B) at (-5, 0);
         \coordinate[label=above left:$C$] (C) at (-2.35, 4.411);
-        \coordinate[label=right:$D$] (D) at (5.782, 1.12);
+        \coordinate[label=below right:$D$] (D) at (5.782, 1.12);
         \coordinate[label=below right:$E$] (E) at (4.28753, -2.5724);
-        \coordinate[label=above left:$F$] (F) at (3.668, 1.364);
+        \coordinate[label=below left:$F$] (F) at (3.668, 1.364);
 
         \draw[dashed] (0, 0) circle[radius=5];
         \draw (A) -- (B) -- (C) -- (A);
@@ -220,8 +218,8 @@ Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angl
         \draw[blue] (F) -- (E) -- (D);
         \draw[red] (C) -- (E) -- (B);
 
-        \draw pic [draw, angle radius=3mm, ""] {right angle = A--F--E};
-        \draw pic [draw, angle radius=3mm, ""] {right angle = A--D--E};
+        \draw pic [draw, angle radius=2mm, ""] {right angle = A--F--E};
+        \draw pic [draw, angle radius=2mm, ""] {right angle = A--D--E};
         
         \node[anchor=south west] at ($(A)!0.5!(C)$) {53};
         \node[anchor=north west] at ($(A)!0.5!(B)$) {75};
@@ -235,7 +233,7 @@ Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angl
     \end{tikzpicture}
 \end{center}
 
-We first introduce a new point $D$ on $CA$ produced such that $\angle ADE = 90\deg$. Clearly $\triangle AFE \equiv \triangle ADE$ by AAS, hence $FE = DE$ and $AF = AD$. Additionally, it is a well-known fact that $E$ is equidistant from $B$ and $C$. Hence, by RHS, $\triangle CDE \equiv \triangle BFE$. Thus, $CD = BF$. Since $CD = 53 + AD$ and $BF = 75 - AF$, we get $AF = 11$. Thus, $AF \times FB = 11 \times (75 - 11) = 704$.
+Let $D$ be a point on $CA$ produced such that $\angle ADE = 90\deg$. Clearly $\triangle AFE \equiv \triangle ADE$ by AAS, hence $FE = DE$ and $AF = AD$. Additionally, it is a well-known fact that $E$ is equidistant from $B$ and $C$. Hence, by RHS, $\triangle CDE \equiv \triangle BFE$. Thus, $CD = BF$. Since $CD = 53 + AD$ and $BF = 75 - AF$, we get $AF = 11$. Thus, $AF \times FB = 11 \times (75 - 11) = 704$.
 
 \begin{question}[165]\label{A::2020-O-1-22}
     Let $\bc{a_k}_{k=1}^\infty$ be an increasing sequence with $a_k < a_{k+1}$ for all $k = 1, 2, 3, \cdots$ formed by arranging all the terms in the set $\bc{2^r + 2^s + 2^t : 0 \leq r < s < t}$ in increasing order. Find the largest value of the integer $n$ such that $a_n \leq 2020$.
