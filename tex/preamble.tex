@@ -26,6 +26,8 @@
 \usepackage{tkz-euclide}
 \usepackage{pgfplots}
 \usepackage[colorlinks=true,pdfusetitle]{hyperref}
+\usepackage{tasks}[newest]
+\usepackage{etoolbox}
 
 % \end{Packages}
 
@@ -45,6 +47,12 @@
 
 % Tikz configuration
 \usetikzlibrary{arrows, intersections, angles, quotes, calc, decorations.markings, patterns}
+
+% MCQ configuration
+\settasks{
+  label = (\Alph*),
+  label-width = 2em,
+}
 
 % \end{Package Configuration}
 
@@ -162,26 +170,6 @@
 % \begin{Math Commands}
 % Most commands taken from echw.sty
 
-% \begin{Misc}
-
-% Only clearpage before and after a part
-\newcommand{\partx}[1]{\cleardoubleoddpage\part{#1}\cleardoubleoddpage}
-
-% Enum links
-\makeatletter
-\newcommand{\hyperrefitem}[1][]{%
-\stepcounter{\@enumctr}%
-\item[{\hyperref[#1]{\csname label\@enumctr\endcsname}}]
-}
-\makeatother
-
-% Force clearpage in front of subsections
-\usepackage{etoolbox}
-\pretocmd{\subsection}{%
-  \ifnum\value{subsection}=0 \else\clearpage\fi
-}{}{}
-
-% \end{Misc}
 % -- LINEAR ALGEBRA --
 
 % Boldface Vectors
@@ -547,6 +535,35 @@
 \newcommand{\wt}[1]{\widetilde{#1}}
 
 %\end{Math Commands}
+
+% \begin{Misc}
+
+% Only clearpage before and after a part
+\newcommand{\partx}[1]{\cleardoubleoddpage\part{#1}\cleardoubleoddpage}
+
+% Enum links
+\makeatletter
+\newcommand{\hyperrefitem}[1][]{%
+\stepcounter{\@enumctr}%
+\item[{\hyperref[#1]{\csname label\@enumctr\endcsname}}]
+}
+\makeatother
+
+% Force clearpage in front of sections and subsections
+\pretocmd{\section}{%
+  \ifnum\value{section}=0 \else\clearpage\fi
+}{}{}
+
+\pretocmd{\subsection}{%
+  \ifnum\value{subsection}=0 \else\clearpage\fi
+}{}{}
+
+% Junior and Senior Question Types
+
+\newcommand{\mcq}{\bigbreak\noindent\textbf{Multiple Choice Questions}}
+\newcommand{\sq}{\bigbreak\noindent\textbf{Short Questions}}
+
+% \end{Misc}
 
 %\begin{Headers}
 
