@@ -1,39 +1,46 @@
 \subsection{Round 1 Solutions}\label{S::2020-O-1}
 
-\resph{https://www.youtube.com/playlist?list=PLSJzThjnYTBQk0nlbVCMbfZprR3MC6Sj-}{Review by \textit{Way Tan}}
-
+\begin{resources}
+    Review by \resit{https://www.youtube.com/playlist?list=PLSJzThjnYTBQk0nlbVCMbfZprR3MC6Sj-}{Way Tan}
+\end{resources}
 
 \begin{question}[0]\label{A::2020-O-1-1}
     If $S$ is the sum of all the \textit{real} roots of the equation $x^2 + \dfrac{1}{x^2} = 2020^2 + \dfrac{1}{2020^2}$ find $\floor{S}$.
 \end{question}
-
-Observe that $x^2 + \frac1{x^2}$ is even. Hence, the sum of roots is 0.
+\begin{solution*}
+    Observe that $x^2 + \frac1{x^2}$ is even. Hence, the sum of roots is 0.
+\end{solution*}
 
 \begin{question}[2030]\label{A::2020-O-1-2}
     Find the largest positive integer $x$ that satisfies the equation \[(\floor{x} - 2020)^2 + (\ceil{x} - 2030)^2 = (\floor{x} - \ceil{x} + 10)^2.\]
 
     \noindent\textit{(Note: If you think that the above equation has no solution in the positive integers, enter your answer as ``0''.)}
 \end{question}
-
-Since $x$ is an integer, we obviously have $x = \floor{x} = \ceil{x}$. We are hence left with the equation $(x - 2020)^2 + (x - 2030)^2 = 10^2$, of which 2020 and 2030 are clearly solutions to. Thus, $x = 2030$.
+\begin{solution*}
+    Since $x$ is an integer, we obviously have $x = \floor{x} = \ceil{x}$. We are hence left with the equation $(x - 2020)^2 + (x - 2030)^2 = 10^2$, of which 2020 and 2030 are clearly solutions to. Thus, $x = 2030$.
+\end{solution*}
 
 \begin{question}[12]\label{A::2020-O-1-3}
     Let $S_n = \dfrac1{1 \times 3} + \dfrac{1}{3 \times 5} + \dfrac1{5 \times 7} + \cdots + \dfrac{1}{(2n-1) \times (2n+1)}$. Find the value of $n$ such that $S_n$ takes the value of 0.48.
 \end{question}
+\begin{solution*}
+    Using partial fraction decomposition, we see that \[S_n = \sum_{i = 1}^{n} \frac{1}{(2n-1)(2n+1)} = \frac12 \sum_{i = 1}^n \bp{\frac{1}{2n-1} - \frac{1}{2n+1}}.\] This sum clearly telescopes, giving $S_n = \frac12 (1 - \frac{1}{2n + 1})$ Setting $S_n = 0.48$ yields $n = 12$.
+\end{solution*}
 
-Using partial fraction decomposition, we see that \[S_n = \sum_{i = 1}^{n} \frac{1}{(2n-1)(2n+1)} = \frac12 \sum_{i = 1}^n \bp{\frac{1}{2n-1} - \frac{1}{2n+1}}.\] This sum clearly telescopes, giving $S_n = \frac12 (1 - \frac{1}{2n + 1})$ Setting $S_n = 0.48$ yields $n = 12$.
-
+\clearpage
 \begin{question}[27]\label{A::2020-O-1-4}
     Given that the three planes in the Cartesian space with equations $2x + 4y + 6z = 5$, $3x + 5y + 2z = 6$ and $8x + 14y + az = b$ have a common line of intersection, find the value of $a + b$.
 \end{question}
-
-Solving $2x + 4y + 6z = 5$ and $3x + 5y + 2z = 6$ simultaneously, we see that the line of intersection has equation $x = 11t - \frac12$, $y = \frac32 - 7t$ and $z = t$. Substituting this into $8x + 14y + az = b$, we get $(17-b) + t(a-10) = 0$. Since this must hold for all real $t$, we immediately have $a = 10$ and $b = 17$, whence $a + b = 27$.
+\begin{solution*}
+    Solving $2x + 4y + 6z = 5$ and $3x + 5y + 2z = 6$ simultaneously, we see that the line of intersection has equation $x = 11t - \frac12$, $y = \frac32 - 7t$ and $z = t$. Substituting this into $8x + 14y + az = b$, we get $(17-b) + t(a-10) = 0$. Since this must hold for all real $t$, we immediately have $a = 10$ and $b = 17$, whence $a + b = 27$.
+\end{solution*}
 
 \begin{question}[70]\label{A::2020-O-1-5}
     Let $i$ be the complex number $\sqrt{-1}$, and $n$ be the smallest positive integer such that $(\sqrt3 + i)^n = a$, where $a$ is a real number. Find the value of $\floor{n-a}$.
 \end{question}
-
-Observe that $(\sqrt3 + i)^n = 2^n e^{in\pi/6}$. Since we want this to be real, its argument must be an integer multiple of $\pi$. Thus, $\frac{n}{6} \in \ZZ$. This immediately gives us $n = 6$, whence $a = 2^6 e^{i\pi} = -64$. Hence, $n - a = 70$.
+\begin{solution*}
+    Observe that $(\sqrt3 + i)^n = 2^n e^{in\pi/6}$. Since we want this to be real, its argument must be an integer multiple of $\pi$. Thus, $\frac{n}{6} \in \ZZ$. This immediately gives us $n = 6$, whence $a = 2^6 e^{i\pi} = -64$. Hence, $n - a = 70$.
+\end{solution*}
 
 \begin{question}[945]\label{A::2020-O-1-6}
     In the three-dimensional Cartesian space, let $\vec i$, $\vec j$ and $\vec k$ denote unit vectors along three mutually perpendicular $x$, $y$ and $z$-axes respectively. Three straight lines $l_1$, $l_2$ and $l_3$ have equations defined by
@@ -44,58 +51,66 @@ Observe that $(\sqrt3 + i)^n = 2^n e^{in\pi/6}$. Since we want this to be real, 
     \end{alignat*}
     where $\m$, $\l$ and $\n$ are real numbers. If the area of the triangle enclosed by the three lines $l_1$, $l_2$ and $l_3$ is denoted by $S$, find the value of $10S^2$.
 \end{question}
-
-Rewriting the equations of the three lines in vector form, we get \[l_1 : \vec r = \cveciii456 + \l \cveciii111, \quad l_2 : \vec r = \cveciii456 + \m \cveciii3{-1}{-2}, \quad l_3 : \vec r = \cveciii123 + \n \cveciii621.\] It is simple to find the pairwise intersections of the planes: $l_1$ and $l_2$ intersect at $A(4, 5, 6)$, $l_2$ and $l_3$ intersect at $B(7, 4, 4)$, while $l_3$ and $l_1$ intersect at $C(1, 2, 3)$. $S$, the area of $\triangle ABC$, can hence be calculated as \[S = [ABC] = \frac12 \abs{\oa{AB} \crossp \oa{AC}} = \frac{3\sqrt{42}}{2}.\] Thus, $10S^2 = 945$.
+\begin{solution*}
+    Rewriting the equations of the three lines in vector form, we get \[l_1 : \vec r = \cveciii456 + \l \cveciii111, \quad l_2 : \vec r = \cveciii456 + \m \cveciii3{-1}{-2}, \quad l_3 : \vec r = \cveciii123 + \n \cveciii621.\] It is simple to find the pairwise intersections of the planes: $l_1$ and $l_2$ intersect at $A(4, 5, 6)$, $l_2$ and $l_3$ intersect at $B(7, 4, 4)$, while $l_3$ and $l_1$ intersect at $C(1, 2, 3)$. $S$, the area of $\triangle ABC$, can hence be calculated as \[S = [ABC] = \frac12 \abs{\oa{AB} \crossp \oa{AC}} = \frac{3\sqrt{42}}{2}.\] Thus, $10S^2 = 945$.
+\end{solution*}
 
 \begin{question}[50]\label{A::2020-O-1-7}
     Given that $f : \RR \to \RR$ such that \[f(a^2 - b^2) = (a-b)(f(a) + f(b))\] for all real numbers $a$ and $b$, and that $f(1) = \dfrac1{101}$, find the value of $\displaystyle\sum_{k=1}^{100} f(k)$.
 \end{question}
-
-By inspection, we have $f(x) = kx$. Since $f(1) = \frac1{101}$, we get $k = \frac1{101}$. Thus, the desired sum evaluates to $\frac1{101} \cdot \frac{100(101)}2 = 50$.
+\begin{solution*}
+    By inspection, we have $f(x) = kx$. Since $f(1) = \frac1{101}$, we get $k = \frac1{101}$. Thus, the desired sum evaluates to $\frac1{101} \cdot \frac{100(101)}2 = 50$.
+\end{solution*}
 
 \begin{question}[4]\label{A::2020-O-1-8}
     Find the sum of all the positive integers $n$ such that $n^4 - 4n^3 + 22n^2 - 36n + 18$ is a perfect square.
 
     \noindent\textit{(Note: If you think that there are infinitely many such positive integers $n$ that satisfy that above conditions, enter your answer as ``9999''.)}
 \end{question}
-
-Observe that $n^4 - 4n^3 + 22n^2 - 36n + 18 = (n^2 - 2n + 9)^2 - 63$. Let this be $m^2$, where $m$ is some integer. By the difference of two squares identity, we get \[63 = (n^2 - 2n + 9 + m)(n^2 - 2n + 9 - m).\] Let $A = n^2 - 2n + 9 + m$ and $B = n^2 - 2n + 9 - m$. We clearly have that $AB = 63$ and $\frac12(A + B) - 9 = (n-1)^2$, a perfect square. Going through all factors of 63, we see that the only pairs of factors satisfying this condition are $(A, B) = (9, 7)$ and $(21, 3)$, which give $0^2$ and $2^2$ respectively. Hence, $n = 1$ or 3, thus the sum desired is 4.
+\begin{solution*}
+    Observe that $n^4 - 4n^3 + 22n^2 - 36n + 18 = (n^2 - 2n + 9)^2 - 63$. Let this be $m^2$, where $m$ is some integer. By the difference of two squares identity, we get \[63 = (n^2 - 2n + 9 + m)(n^2 - 2n + 9 - m).\] Let $A = n^2 - 2n + 9 + m$ and $B = n^2 - 2n + 9 - m$. We clearly have that $AB = 63$ and $\frac12(A + B) - 9 = (n-1)^2$, a perfect square. Going through all factors of 63, we see that the only pairs of factors satisfying this condition are $(A, B) = (9, 7)$ and $(21, 3)$, which give $0^2$ and $2^2$ respectively. Hence, $n = 1$ or 3, thus the sum desired is 4.
+\end{solution*}
 
 \begin{question}[43]\label{A::2020-O-1-9}
     Assume that \[(x+2+m)^{2019} = a_0 + a_1 (x+1) + a_2 (x+1)^2 + \cdots + a_{2019}(x+1)^{2019}.\] Find the largest possible integer $m$ such that \[(a_0 + a_2 + a_4 + \cdots + a_{2018})^2 - (a_1 + a_3 + a_5 + \cdots + a_{2019})^2 \leq 2020^{2019}.\]
 \end{question}
-
-Substituting $x = 0$ yields $a_0 + a_1 + \cdots + a_{2018} + a_{2019} = (m+2)^{2019}$, while substituting $x = -2$ yields $a_0 - a_1 + \cdots + a_{2018} - a_{2019} = m^{2019}$. Hence, \[a_0 + a_2 +\cdots + a_{2018} = \frac{(m+2)^{2019} + m^{2019}}{2},\] whence \[a_1 + a_3 + \cdots + a_{2019} = (m+2)^{2019} - \frac{(m+2)^{2019} + m^{2019}}{2}.\] We thus want \[\bp{\frac{(m+2)^{2019} + m^{2019}}{2}}^2 - \bp{(m+2)^{2019} - \frac{(m+2)^{2019} + m^{2019}}{2}}^2 \leq 2020^{2019}.\] The LHS simplifies to $\bp{m(m+2)}^{2019}$. Thus, $m(m+2) \leq 2020$, whence $m \leq 43$.
+\begin{solution*}
+    Substituting $x = 0$ yields $a_0 + a_1 + \cdots + a_{2018} + a_{2019} = (m+2)^{2019}$, while substituting $x = -2$ yields $a_0 - a_1 + \cdots + a_{2018} - a_{2019} = m^{2019}$. Hence, \[a_0 + a_2 +\cdots + a_{2018} = \frac{(m+2)^{2019} + m^{2019}}{2},\] whence \[a_1 + a_3 + \cdots + a_{2019} = (m+2)^{2019} - \frac{(m+2)^{2019} + m^{2019}}{2}.\] We thus want \[\bp{\frac{(m+2)^{2019} + m^{2019}}{2}}^2 - \bp{(m+2)^{2019} - \frac{(m+2)^{2019} + m^{2019}}{2}}^2 \leq 2020^{2019}.\] The LHS simplifies to $\bp{m(m+2)}^{2019}$. Thus, $m(m+2) \leq 2020$, whence $m \leq 43$.
+\end{solution*}
 
 \begin{question}[8]\label{A::2020-O-1-10}
     Given that $S = \displaystyle\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{\sqrt{n(n+k)}}$, find the value of $\floor{(S+2)^2}$.
 \end{question}
-
-Dividing through by $n$ yields \[S = \lim_{n \to \infty} \sum_{k=1}^n \frac1{n} \frac{1}{\sqrt{1 + k/n}},\] which is very clearly a Riemann sum. In the limit, we get \[S = \int_0^1 \frac1{\sqrt{1 + x}} \d x = 2\sqrt2 - 2.\] Thus, $(S + 2)^2 = 8$.
+\begin{solution*}
+    Dividing through by $n$ yields \[S = \lim_{n \to \infty} \sum_{k=1}^n \frac1{n} \frac{1}{\sqrt{1 + k/n}},\] which is very clearly a Riemann sum. In the limit, we get \[S = \int_0^1 \frac1{\sqrt{1 + x}} \d x = 2\sqrt2 - 2.\] Thus, $(S + 2)^2 = 8$.
+\end{solution*}
 
 \begin{question}[4097]\label{A::2020-O-1-11}
     Let $A = \bc{1, 2, \cdots, 10}$. Count the number of ordered pairs $(S_1, S_2)$, where $S_1$ and $S_2$ are non-intersecting and non-empty subsets of $A$ such that the largest number in $S_1$ is smaller than the smallest number in $S_2$. For example, if $S_1 = \bc{1, 4}$ and $S_2 = \bc{5, 6, 7}$, then $(S_1, S_2)$ is such an ordered pair.
 \end{question}
-
-Let the largest element of $S_1$ be $k$. There are $2^{k-1}$ ways to choose $S_1$, and there are $2^{10-k} - 1$ ways to choose $S_2$ (note that we subtract 1 since $S_2 \neq \varnothing$). There are hence $2^{k-1} \bp{2^{10-k} - 1}$ possibilities. Summing over $k = 1, \ldots, 9$, we get a total of \[\sum_{k=1}^9 2^{k-1} \bp{2^{10-k} - 1} = \sum_{k=1}^9 \bp{2^9 - 2^{k-1}} = 9 \cdot 2^9 - \frac{1-2^9}{1-2} = 4097\] ordered pairs.
+\begin{solution*}
+    Let the largest element of $S_1$ be $k$. There are $2^{k-1}$ ways to choose $S_1$, and there are $2^{10-k} - 1$ ways to choose $S_2$ (note that we subtract 1 since $S_2 \neq \varnothing$). There are hence $2^{k-1} \bp{2^{10-k} - 1}$ possibilities. Summing over $k = 1, \ldots, 9$, we get a total of \[\sum_{k=1}^9 2^{k-1} \bp{2^{10-k} - 1} = \sum_{k=1}^9 \bp{2^9 - 2^{k-1}} = 9 \cdot 2^9 - \frac{1-2^9}{1-2} = 4097\] ordered pairs.
+\end{solution*}
 
 \begin{question}[1010]\label{A::2020-O-1-12}
     Each cell of a $2020 \times 2020$ table is filled with a number which is either 1 or $-1$. For $u - 1, \ldots, 2020$, let $R_i$ be the product of all the numbers in the $i$th row and let $C_i$ be the product of all the numbers in the $i$th column. Suppose $R_i + C_i = 0$ for all $i = 1, \ldots, 2020$. What is the least number of $-1$'s in the table?
 \end{question}
-
-Let $a_{ij}$ represent the number in the cell in the $i$th row and $j$th column. Observe that $R_i = \prod_{n = 1}^{2020} a_{in}$ and $C_i = \prod_{n=1}^{2020} a_{ni}$. Then \[\prod_{n = 1}^{2020} a_{in} = -\prod_{n=1}^{2020} a_{ni}.\] The number of $-1$s in the two products hence differ by an odd number. In the optimal case, one product has no $-1$s, while the other has one $-1$. We now construct a grid with such a property. Let $a_{ij} = -1$ if $(i, j) \in \bc{(1, 2), (3, 4), \ldots, (2019, 2020)}$, and $a_{ij} = 1$ otherwise. It is quite clear that \[\prod_{n = 1}^{2020} a_{in} = \begin{cases}
-    1, & i \text{ odd}\\
-    -1, & i \text{ even}
-\end{cases}, \qquad \prod_{n = 1}^{2020} a_{ni} = \begin{cases}
-    -1, & i \text{ odd}\\
-    1, & i \text{ even}
-\end{cases},\] whence $R_i + C_i = 0$ for $i = 1, \ldots, 2020$ as desired. Thus, the least number of $-1$s is $\abs{\bc{(1, 2), (3, 4), \ldots, (2019, 2020)}} = 1010$.
+\begin{solution*}
+    Let $a_{ij}$ represent the number in the cell in the $i$th row and $j$th column. Observe that $R_i = \prod_{n = 1}^{2020} a_{in}$ and $C_i = \prod_{n=1}^{2020} a_{ni}$. Then \[\prod_{n = 1}^{2020} a_{in} = -\prod_{n=1}^{2020} a_{ni}.\] The number of $-1$s in the two products hence differ by an odd number. In the optimal case, one product has no $-1$s, while the other has one $-1$. We now construct a grid with such a property. Let $a_{ij} = -1$ if $(i, j) \in \bc{(1, 2), (3, 4), \ldots, (2019, 2020)}$, and $a_{ij} = 1$ otherwise. It is quite clear that \[\prod_{n = 1}^{2020} a_{in} = \begin{cases}
+        1, & i \text{ odd}\\
+        -1, & i \text{ even}
+    \end{cases}, \qquad \prod_{n = 1}^{2020} a_{ni} = \begin{cases}
+        -1, & i \text{ odd}\\
+        1, & i \text{ even}
+    \end{cases},\] whence $R_i + C_i = 0$ for $i = 1, \ldots, 2020$ as desired. Thus, the least number of $-1$s is $\abs{\bc{(1, 2), (3, 4), \ldots, (2019, 2020)}} = 1010$.
+\end{solution*}
 
 \begin{question}[5120]\label{A::2020-O-1-13}
     Assume that the sequence $\bc{a_k}_{k=1}^\infty$ follows an arithmetic progression with $a_2 + a_4 + a_9 = 24$. Find the maximum value of $S_8 \times S_{10}$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$.
 \end{question}
-
-Let $a_k = a_1 + (k-1)d$. From the given equation, we immediately have $3a_1 + 12d = 24$, whence $2a_1 + 8a_1 = 16$. Since $S_k = ka_1 + \frac{(k-1)k}2 \cdot d$, we have \[S_8 \cdot S_{10} = (8a_1 + 28d)(10a_1 + 45d) = 20(16 - d)(16 + d) = 20\bp{16^2 - d^2}.\] Thus, the maximum value of $S_8 \cdot S_{10}$ is $20 \cdot 16^2 = 5120$, when $d = 0$.
+\begin{solution*}
+    Let $a_k = a_1 + (k-1)d$. From the given equation, we immediately have $3a_1 + 12d = 24$, whence $2a_1 + 8a_1 = 16$. Since $S_k = ka_1 + \frac{(k-1)k}2 \cdot d$, we have \[S_8 \cdot S_{10} = (8a_1 + 28d)(10a_1 + 45d) = 20(16 - d)(16 + d) = 20\bp{16^2 - d^2}.\] Thus, the maximum value of $S_8 \cdot S_{10}$ is $20 \cdot 16^2 = 5120$, when $d = 0$.
+\end{solution*}
 
 \begin{question}[0]\label{A::2020-O-1-14}
     Consider all functions $g : \RR \to \RR$ satisfying the conditions that
@@ -105,15 +120,18 @@ Let $a_k = a_1 + (k-1)d$. From the given equation, we immediately have $3a_1 + 1
     \end{enumerate}
     Find the \textit{largest} possible value of $g(0)$.
 \end{question}
-
-Let $a = x+h$ and $b = x$. From the first condition, we get \[\frac{\abs{g(x+h) - g(x)}}{h} \leq 1 \implies \abs{g'(x)} \leq 1.\] Now consider the fixed point iteration $x_{n+1} = g(x_n)$, which must converge to the root of $g(x) = x$ since $\abs{g'(x)} \leq 1$. The second condition states that if $x_n = 0$, then $x_{n+3} = x_n = 0$. This immediately implies that $x = 0$ is a root of $g(x) = x$, whence $g(0) = 0$.
+\begin{solution*}
+    Let $a = x+h$ and $b = x$. From the first condition, we get \[\frac{\abs{g(x+h) - g(x)}}{h} \leq 1 \implies \abs{g'(x)} \leq 1.\] Now consider the fixed point iteration $x_{n+1} = g(x_n)$, which must converge to the root of $g(x) = x$ since $\abs{g'(x)} \leq 1$. The second condition states that if $x_n = 0$, then $x_{n+3} = x_n = 0$. This immediately implies that $x = 0$ is a root of $g(x) = x$, whence $g(0) = 0$.
+\end{solution*}
 
 \begin{question}[4039]\label{A::2020-O-1-15}
     A sequence $\bc{a_i}_{i=1}^\infty$ is called a \textit{good} sequence if $\dfrac{S_{2n}}{S_n}$ is a constant for all $n \geq 1$, where $S_k$ denotes the sum $a_1 + a_2 + \cdots + a_k$. Suppose it is known that the sequence $\bc{a_i}_{i = 1}^\infty$ is a \textit{good} sequence that follows an arithmetic progression. Determine $a_{2020}$ if $a_1 = 1 \neq a_2$.
 \end{question}
+\begin{solution*}
+    Let $a_i = 1 + (i-1)k$. Then $S_n = n + \frac{k(n-1)n}{2}$. Since $\frac{S_{2n}}{S_n}$ is constant, we have $\frac{S_2}{S_1} = \frac{S_4}{S_2}$. This gives $S_2^2 = S_1 S_4$, whence $(2+k)^2 = 4 + 6k$. This gives us $k = 2$ (note that $k \neq 0$ since $a_1 \neq a_2$). Thus, $a_{2020} = 1 + 2(2020-1) = 4039$.
+\end{solution*}
 
-Let $a_i = 1 + (i-1)k$. Then $S_n = n + \frac{k(n-1)n}{2}$. Since $\frac{S_{2n}}{S_n}$ is constant, we have $\frac{S_2}{S_1} = \frac{S_4}{S_2}$. This gives $S_2^2 = S_1 S_4$, whence $(2+k)^2 = 4 + 6k$. This gives us $k = 2$ (note that $k \neq 0$ since $a_1 \neq a_2$). Thus, $a_{2020} = 1 + 2(2020-1) = 4039$.
-
+\clearpage
 \begin{question}[12]\label{A::2020-O-1-16}
     Determine the smallest positive integer $p$ such that the system \[\left\{
     \begin{aligned}
@@ -121,44 +139,50 @@ Let $a_i = 1 + (i-1)k$. Then $S_n = n + \frac{k(n-1)n}{2}$. Since $\frac{S_{2n}}
         4xy + 2yz + pxz &= 0
     \end{aligned}\right.\] has more the one set of real solutions in $x$, $y$, $z$.
 \end{question}
-
-From the first equation, we have $6x = -4y - 3z$. Multiplying the second equation by 6 and substituting $6x$, we get \[16y^2 + 4pyz + 3pz^2 = 0. \tag{1}\] Taking the discriminant with respect to $4y$, we have $z^2(p^2 - 12p)$, which must be greater than or equal to 0 to admit multiple solutions. Hence, $p^2 - 12p \geq 0$, whence $p \geq 12$. Thus, $\min p = 12$. Indeed, when $p = 12$, we get $4y + 6z = 0$ from (1), whence $(x, y, z) = (t, -3t, 2t)$ for all real $t$.
+\begin{solution*}
+    From the first equation, we have $6x = -4y - 3z$. Multiplying the second equation by 6 and substituting $6x$, we get \[16y^2 + 4pyz + 3pz^2 = 0. \tag{1}\] Taking the discriminant with respect to $4y$, we have $z^2(p^2 - 12p)$, which must be greater than or equal to 0 to admit multiple solutions. Hence, $p^2 - 12p \geq 0$, whence $p \geq 12$. Thus, $\min p = 12$. Indeed, when $p = 12$, we get $4y + 6z = 0$ from (1), whence $(x, y, z) = (t, -3t, 2t)$ for all real $t$.
+\end{solution*}
 
 \begin{question}[8800]\label{A::2020-O-1-17}
     Let $ABC$ be a triangle with $a = BC$, $b = AC$ and $c = AB$. It is given that $c = 100$ and \[\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43.\] Let $P$ be a point on the inscribed circle of $\triangle ABC$. Find the maximum value of \[PA^2 + PB^2 + PC^2.\]
 \end{question}
-
-Since $\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43$, $\triangle ABC$ is congruent to a 3-4-5 right triangle, where $\angle C = 90\deg$. Since $c = 100 = 20 \cdot 5$, we have $a = 20 \cdot 3 = 60$ and $b = 20 \cdot 4 = 80$. Let $C(0,0)$. Then $A(80, 0)$ and $B(0, 60)$. Note that the incircle of $\triangle ABC$ has radius $20 \cdot 1 = 20$ and centre $(20, 20)$. Let $(x, y)$ be a point on the incircle, i.e. \[(x-20)^2 + (y-20)^2 = 20^2.\implies x^2 + y^2 = 40x + 40y - 20^2 \tag{1}.\] We thus aim to maximize \[PA^2 + PB^2 + PC^2 = \bs{(x-80)^2 + y^2} + \bs{x^2 + (y-60)^2} + \bs{x^2 + y^2}.\] Expanding and using (1), we get \[PA^2 + PB^2 + PC^2 = -40x + 8800.\] Since $x \geq 0$, the maximum value of $PA^2 + PB^2 + PC^2$ is 8800.
+\begin{solution*}
+    Since $\frac{\cos A}{\cos B} = \frac{b}{a} = \frac43$, $\triangle ABC$ is congruent to a 3-4-5 right triangle, where $\angle C = 90\deg$. Since $c = 100 = 20 \cdot 5$, we have $a = 20 \cdot 3 = 60$ and $b = 20 \cdot 4 = 80$. Let $C(0,0)$. Then $A(80, 0)$ and $B(0, 60)$. Note that the incircle of $\triangle ABC$ has radius $20 \cdot 1 = 20$ and centre $(20, 20)$. Let $(x, y)$ be a point on the incircle, i.e. \[(x-20)^2 + (y-20)^2 = 20^2.\implies x^2 + y^2 = 40x + 40y - 20^2 \tag{1}.\] We thus aim to maximize \[PA^2 + PB^2 + PC^2 = \bs{(x-80)^2 + y^2} + \bs{x^2 + (y-60)^2} + \bs{x^2 + y^2}.\] Expanding and using (1), we get \[PA^2 + PB^2 + PC^2 = -40x + 8800.\] Since $x \geq 0$, the maximum value of $PA^2 + PB^2 + PC^2$ is 8800.
+\end{solution*}
 
 \begin{question}[2017]\label{A::2020-O-1-18}
     Find the largest positive integer $n$ less than 2020 such that $\binom{n-1}{k} - (-1)^k$ is divisible by $n$ for $k = 0, 1, \ldots, n-1$.
 \end{question}
-
-\begin{claim}{1}
-    If $n$ is prime, then $\binom{n-1}{k} - (-1)^k \equiv 0 \pmod{n}$.
-\end{claim}
-\begin{proof}
-    Observe that \[\binom{n-1}{k} = \frac{(n-1)(n-2)\cdots(n-k)}{k!}.\] Since $n$ is prime, $k!$ has a multiplicative inverse in $\FF_n$. We can thus take congruences in the numerator without any problem: \[\frac{(n-1)(n-2)\cdots(n-k)}{k!} \equiv \frac{(-1)(-2)\cdots(-k)}{k!} = \frac{(-1)^k k!}{k!} = (-1)^k \pmod{n}.\] Thus, \[\binom{n-1}{k} - (-1)^k \equiv (-1)^k - (-1)^k = 0 \pmod{n}.\]
-\end{proof}
-
-Observe that the largest prime less than 2020 is 2017. To finish, we show that $n = 2018$ and $n = 2019$ do not work.
-
-\case{1} Suppose $n = 2018$. When $k = 2$, we have \[\binom{2017}{2} - 1 = 2017 \cdot 1008 - 1 \equiv -1 \cdot 1008 - 1 \equiv 1009 \neq 0 \pmod{2018}.\]
-
-\case{2} Suppose $n = 2019$. When $k = 3$, we have \[\binom{2018}{3} - 1 = 2018 \cdot 2017 \cdot 336 - 1 \equiv -1 \cdot -2 \cdot 336 - 1 \equiv 672 \neq 0 \pmod{2019}.\]
-
-Thus, the largest $n$ is 2017.
+\begin{solution*}
+    We begin by showing that all primes satisfy the given condition.
+    \begin{claim}
+        If $n$ is prime, then $\binom{n-1}{k} - (-1)^k \equiv 0 \pmod{n}$.
+    \end{claim}
+    \begin{proof}
+        Observe that \[\binom{n-1}{k} = \frac{(n-1)(n-2)\cdots(n-k)}{k!}.\] Since $n$ is prime, $k!$ has a multiplicative inverse in $\FF_n$. We can thus take congruences in the numerator without any problem: \[\frac{(n-1)(n-2)\cdots(n-k)}{k!} \equiv \frac{(-1)(-2)\cdots(-k)}{k!} = \frac{(-1)^k k!}{k!} = (-1)^k \pmod{n}.\] Thus, \[\binom{n-1}{k} - (-1)^k \equiv (-1)^k - (-1)^k = 0 \pmod{n}.\]
+    \end{proof}
+    
+    Observe that the largest prime less than 2020 is 2017. To finish, we show that $n = 2018$ and $n = 2019$ do not work.
+    
+    \case{1} Suppose $n = 2018$. When $k = 2$, we have \[\binom{2017}{2} - 1 = 2017 \cdot 1008 - 1 \equiv -1 \cdot 1008 - 1 \equiv 1009 \neq 0 \pmod{2018}.\]
+    
+    \case{2} Suppose $n = 2019$. When $k = 3$, we have \[\binom{2018}{3} - 1 = 2018 \cdot 2017 \cdot 336 - 1 \equiv -1 \cdot -2 \cdot 336 - 1 \equiv 672 \neq 0 \pmod{2019}.\]
+    
+    Thus, the largest $n$ is 2017.
+\end{solution*}
 
 \begin{question}[41]\label{A::2020-O-1-19}
     Assume that $\bc{a_k}_{k=1}^\infty$ is a sequence with the property that for any distinct positive integers $m$, $n$, $p$, $q$ with $m + n = p + q$, the following equality always holds: \[\frac{a_m + a_n}{(a_m + 1)(a_n + 1)} = \frac{a_p + a_q}{(a_p + 1)(a_q + 1)}.\] Given $a_1 = 0$ and $a_2 = \dfrac12$, determine $\dfrac1{1 - a_5}$.
-\end{question}
 
-Let $m = 1$, $n = 3$, and $p = q = 2$. Using the given equation and conditions, we get \[\frac{a_1 + a_3}{(a_1 + 1)(a_3 + 1)} = \frac{a_2 + a_2}{(a_2 + 1)(a_2 + 1)} \implies a_3 = \frac45.\] Let $m = 1$, $n = 5$, $p = q = 3$. Once again, using the given equation and conditions, we get \[\frac{a_1 + a_5}{(a_1 + 1)(a_5 + 1)} + \frac{a_3 + a_3}{(a_3 + 1)(a_3 + 1)} \implies a_5 = \frac{40}{41}.\] Thus, $\frac{1}{1 - a_5} = 41$.
+    \noindent\textit{(Hint: Consider $c_k = \dfrac{1}{a_k + 1} - \dfrac12$ for all positive integer $k$.)}
+\end{question}
+\begin{solution*}
+    Let $m = 1$, $n = 3$, and $p = q = 2$. Using the given equation and conditions, we get \[\frac{a_1 + a_3}{(a_1 + 1)(a_3 + 1)} = \frac{a_2 + a_2}{(a_2 + 1)(a_2 + 1)} \implies a_3 = \frac45.\] Let $m = 1$, $n = 5$, $p = q = 3$. Once again, using the given equation and conditions, we get \[\frac{a_1 + a_5}{(a_1 + 1)(a_5 + 1)} + \frac{a_3 + a_3}{(a_3 + 1)(a_3 + 1)} \implies a_5 = \frac{40}{41}.\] Thus, $\frac{1}{1 - a_5} = 41$.
+\end{solution*}
 
 \begin{question}[140]\label{A::2020-O-1-20}
     In the triangle $ABC$, the incircle touches the sides $BC$, $CA$, $AB$ at $D$, $E$, $F$ respectively. The line segments $ED$ and $AB$ are extended to intersect at $P$ such that $AB = BP = PD$. Suppose $CA = 9$. Find the value of $[ABC]^2$, where $[ABC]$ is the area of the triangle $ABC$.
 \end{question}
-
 \begin{center}
     \begin{tikzpicture}
         \coordinate[label=below left:$A$] (A) at (0, 0);
@@ -189,19 +213,19 @@ Let $m = 1$, $n = 3$, and $p = q = 2$. Using the given equation and conditions, 
         \fill (P) circle[radius=2.5pt];
     \end{tikzpicture}
 \end{center}
-
-Let $a = BC$, $b = CA = 9$, $c = AB$ and $s = \frac12 (a + b + c)$. We clearly have $AF = AE = s-a$, $BF = BD = s-9$ and $CD = CE = s-c$.
-
-Using Menalaus' theorem with respect to $\triangle ABC$, we have \[\frac{AP}{PB} \frac{BD}{DC} \frac{CE}{EA} = 1 \implies 2 \cdot \frac{s-9}{s-c} \cdot \frac{s-c}{s-a} = 1.\] Rearranging, we get $3a + c = 27$.
-
-Using Menalaus' theorem with respect to $\triangle APE$, we have \[\frac{AC}{CE} \frac{ED}{DP} \frac{PB}{BA} = 1 \implies \frac{9}{s-c}\cdot \frac{ED}{c} \cdot 1 = 1.\] Rearranging, we get $ED = \frac{c(a + 9 - c)}{18}$. Since $CE = \frac12 (a + 9 - c)$, we have \[\frac{ED}{CE} = \frac{c}{9}.\]
-
-Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angle ECD$, it follows that $\angle BDP = \angle C$. Using the cosine rule on $\angle BDP$ in $\triangle BPD$, we have \[1 - \cos C = \frac{BD^2}{2 \cdot BP^2} = \frac{(s-b)^2}{2c^2}.\] Using the cosine rule on $\angle C$ in $\triangle CED$, we have \[1 - \cos C = \frac{ED^2}{2 \cdot CE^2} = \frac{c^2}{2 \cdot 81}.\] Hence, \[\frac{(s-b)^2}{2c^2} = \frac{c^2}{2 \cdot 81} \implies \frac{(a + c - 9)^2}{4c^2} = \frac{c^2}{81}.\] Using the substitution $3a + c = 27$ yields \[\frac{4(9-a)^2}{4 \cdot 9(9-a)^2} = \frac{9(9-a)^2}{81},\] whence $a = 8$ and $c = 3$. Finally, by Heron's formula, we get \[[ABC]^2 = s(s-a)(s-b)(s-c) = 10(10-8)(10-9)(10-8) = 140.\]
+\begin{solution*}   
+    Let $a = BC$, $b = CA = 9$, $c = AB$ and $s = \frac12 (a + b + c)$. We clearly have $AF = AE = s-a$, $BF = BD = s-9$ and $CD = CE = s-c$.
+    
+    Using Menalaus' theorem with respect to $\triangle ABC$, we have \[\frac{AP}{PB} \frac{BD}{DC} \frac{CE}{EA} = 1 \implies 2 \cdot \frac{s-9}{s-c} \cdot \frac{s-c}{s-a} = 1.\] Rearranging, we get $3a + c = 27$.
+    
+    Using Menalaus' theorem with respect to $\triangle APE$, we have \[\frac{AC}{CE} \frac{ED}{DP} \frac{PB}{BA} = 1 \implies \frac{9}{s-c}\cdot \frac{ED}{c} \cdot 1 = 1.\] Rearranging, we get $ED = \frac{c(a + 9 - c)}{18}$. Since $CE = \frac12 (a + 9 - c)$, we have \[\frac{ED}{CE} = \frac{c}{9}.\]
+    
+    Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angle ECD$, it follows that $\angle BDP = \angle C$. Using the cosine rule on $\angle BDP$ in $\triangle BPD$, we have \[1 - \cos C = \frac{BD^2}{2 \cdot BP^2} = \frac{(s-b)^2}{2c^2}.\] Using the cosine rule on $\angle C$ in $\triangle CED$, we have \[1 - \cos C = \frac{ED^2}{2 \cdot CE^2} = \frac{c^2}{2 \cdot 81}.\] Hence, \[\frac{(s-b)^2}{2c^2} = \frac{c^2}{2 \cdot 81} \implies \frac{(a + c - 9)^2}{4c^2} = \frac{c^2}{81}.\] Using the substitution $3a + c = 27$ yields \[\frac{4(9-a)^2}{4 \cdot 9(9-a)^2} = \frac{9(9-a)^2}{81},\] whence $a = 8$ and $c = 3$. Finally, by Heron's formula, we get \[[ABC]^2 = s(s-a)(s-b)(s-c) = 10(10-8)(10-9)(10-8) = 140.\]
+\end{solution*}
 
 \begin{question}[704]\label{A::2020-O-1-21}
     In an acute-angled triangle $ABC$, $AB = 75$, $AC = 53$, the external bisector of $\angle A$ on $CA$ produced meets the circumcircle of triangle $ABC$ at $E$, and $F$ is the foot of the perpendicular from $E$ onto $AB$. Find the value of $AF \times FB$.
 \end{question}
-
 \begin{center}
     \begin{tikzpicture}[scale=0.6]
         \coordinate[label=above right:$A$] (A) at (4.758, 1.535);
@@ -232,40 +256,46 @@ Since $\triangle BPD$ and $\triangle ECD$ are isosceles, and $\angle BDP = \angl
         \fill (F) circle[radius=2.5pt];
     \end{tikzpicture}
 \end{center}
-
-Let $D$ be a point on $CA$ produced such that $\angle ADE = 90\deg$. Clearly $\triangle AFE \equiv \triangle ADE$ by AAS, hence $FE = DE$ and $AF = AD$. Additionally, it is a well-known fact that $E$ is equidistant from $B$ and $C$. Hence, by RHS, $\triangle CDE \equiv \triangle BFE$. Thus, $CD = BF$. Since $CD = 53 + AD$ and $BF = 75 - AF$, we get $AF = 11$. Thus, $AF \times FB = 11 \times (75 - 11) = 704$.
+\begin{solution*}    
+    Let $D$ be a point on $CA$ produced such that $\angle ADE = 90\deg$. Clearly $\triangle AFE \equiv \triangle ADE$ by AAS, hence $FE = DE$ and $AF = AD$. Additionally, it is a well-known fact that $E$ is equidistant from $B$ and $C$. Hence, by RHS, $\triangle CDE \equiv \triangle BFE$. Thus, $CD = BF$. Since $CD = 53 + AD$ and $BF = 75 - AF$, we get $AF = 11$. Thus, $AF \times FB = 11 \times (75 - 11) = 704$.
+\end{solution*}
 
 \begin{question}[165]\label{A::2020-O-1-22}
     Let $\bc{a_k}_{k=1}^\infty$ be an increasing sequence with $a_k < a_{k+1}$ for all $k = 1, 2, 3, \cdots$ formed by arranging all the terms in the set $\bc{2^r + 2^s + 2^t : 0 \leq r < s < t}$ in increasing order. Find the largest value of the integer $n$ such that $a_n \leq 2020$.
 \end{question}
+\begin{solution*}
+    Observe that an integer is in the set if and only if its binary expansion has exactly 3 ones. Since $2020_{10} = 11111100100_{2}$, the largest $a_n$ less than 2020 is $11100000000_{2}$. Notice that this is also the largest $a_n$ where $a_n$ has 11 digits in binary. Thus, there are a total of $\binom{11}{3} = 165$ integers in the sequence before this $a_n$, thus $\max n = 165$.
+\end{solution*}
 
-Observe that an integer is in the set if and only if its binary expansion has exactly 3 ones. Since $2020_{10} = 11111100100_{2}$, the largest $a_n$ less than 2020 is $11100000000_{2}$. Notice that this is also the largest $a_n$ where $a_n$ has 11 digits in binary. Thus, there are a total of $\binom{11}{3} = 165$ integers in the sequence before this $a_n$, thus $\max n = 165$.
-
+\clearpage
 \begin{question}[838]\label{A::2020-O-1-23}
     Let $n$ be a positive integer and $S$ be the set of all numbers that can be written in the form $\displaystyle\sum_{i = 2}^k a_{i-1}a_i$ with $a_1, \ldots, a_k$ being positive integers that sum to $n$. Suppose the average value of all the numbers in $S$ is 88199. Determine $n$.
 \end{question}
+\begin{solution*}
+    Testing small values of $n$, we see that \[S = \bc{s \in \ZZ \mid n-1 \leq \bp{\frac{n}{2}}^2}\] when $n$ is even, and \[S = \bc{s \in \ZZ \mid n-1 \leq \bp{\frac{n-1}{2}}\bp{\frac{n+1}{2}}}\] when $n$ is odd.
 
-Testing small values of $n$, we see that \[S = \bc{s \in \ZZ \mid n-1 \leq \bp{\frac{n}{2}}^2}\] when $n$ is even, and \[S = \bc{s \in \ZZ \mid n-1 \leq \bp{\frac{n-1}{2}}\bp{\frac{n+1}{2}}}\] when $n$ is odd.
-
-\textit{Case 1.} If $n$ is even, we get $\frac12 \bs{(n-1) + \bp{\frac{n}{2}}^2} = 88199$, whence $n = 838$.
-
-\textit{Case 2.} If $n$ is odd, we get $\frac12 \bs{(n-1) + \bp{\frac{n-1}{2}}\bp{\frac{n+1}{2}}} = 88199$, which has no integer solutions.
-
-Thus, $n = 838$.
+    \case{1} If $n$ is even, we get $\frac12 \bs{(n-1) + \bp{\frac{n}{2}}^2} = 88199$, whence $n = 838$.
+    
+    \case{2} If $n$ is odd, we get $\frac12 \bs{(n-1) + \bp{\frac{n-1}{2}}\bp{\frac{n+1}{2}}} = 88199$, which has no integer solutions.
+    
+    Thus, $n = 838$.
+\end{solution*}
 
 \begin{question}[1600]\label{A::2020-O-1-24}
     Let $x$, $y$, $z$ and $w$ be real numbers such that $x + y + z + w = 5$. Find the minimum value of $(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2$.
 \end{question}
-
-By the Cauchy-Schwarz inequality, one has
-\begin{align*}
-    \bs{(x+5)+(y+10)+(z+20)+(w+40)}^2 \hspace{10em}\\
-    \hspace{3em}\leq 4 \bs{(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2}
-\end{align*}
-Hence, the minimum value of $(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2$ is $\frac{80^2}4 = 1600$.
+\begin{solution*}
+    By the Cauchy-Schwarz inequality, one has
+    \begin{align*}
+        \bs{(x+5)+(y+10)+(z+20)+(w+40)}^2 \hspace{10em}\\
+        \hspace{3em}\leq 4 \bs{(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2}
+    \end{align*}
+    Hence, the minimum value of $(x + 5)^2 + (y + 10)^2 + (z + 20)^2 + (w + 40)^2$ is $\frac{80^2}4 = 1600$.
+\end{solution*}
 
 \begin{question}[290]\label{A::2020-O-1-25}
     Let $p$ and $q$ be positive integers satisfying the equation $p^2 + q^2 = 3994(p-q)$. Determine the largest possible value of $q$.
 \end{question}
-
-Completing the square gives \[(p-1997)^2 + (q+1997)^2 = 2 \cdot 1997^2. \tag{1}\] Let $P = p - 1997$ and $Q = q + 1997$. Multiplying (1) by 2 gives \[2P^2 + 2Q^2 = 3994^2.\] We now recognize the LHS to be a sum of two squares: \[(P+Q)^2 + (P-Q)^2 = 3994^2.\] We hence get a Pythagorean triple. Using the standard parameterization of such triples, we have $P+Q = m^2 - n^2$, $P-Q = 2mn$ and $3994 = m^2 + n^2$ for some positive integers $m$ and $n$. Without loss of generality, suppose $m \geq n$. Then $m = 63$ and $\pm n = 5$ is the only pair that gives $m^2 + n^2 = 3994$. Hence, $Q = \frac12 (m^2 - n^2 - 2mn) = 2287$ (note we reject $Q = 1657$ since $Q \geq 1997$), whence $q = 2287 - 1997 = 290$.
+\begin{solution*}
+    Completing the square gives \[(p-1997)^2 + (q+1997)^2 = 2 \cdot 1997^2. \tag{1}\] Let $P = p - 1997$ and $Q = q + 1997$. Multiplying (1) by 2 gives \[2P^2 + 2Q^2 = 3994^2.\] We now recognize the LHS to be a sum of two squares: \[(P+Q)^2 + (P-Q)^2 = 3994^2.\] We hence get a Pythagorean triple. Using the standard parameterization of such triples, we have $P+Q = m^2 - n^2$, $P-Q = 2mn$ and $3994 = m^2 + n^2$ for some positive integers $m$ and $n$. Since $m > n$, we see that $(m, n) = (63, \pm5)$ are the only two pairs that give $m^2 + n^2 = 3994$. Hence, $Q = \frac12 (m^2 - n^2 - 2mn) = 2287$ (note we reject $Q = 1657$ since $Q \geq 1997$), whence $q = 2287 - 1997 = 290$.
+\end{solution*}

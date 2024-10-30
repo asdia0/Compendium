@@ -65,32 +65,15 @@
 
 % \end{Tikz Custom Styles}
 
-% \begin{Solutions, Cases and Subcases}
+% \begin{Cases and Subcases}
 
-% -- SOLUTIONS --
-
-% Vanilla solution
-\NewDocumentCommand{\sol}{g o}{\noindent\textbf{Solution #1.} \IfNoValueTF{#2}{}{\textit{(#2)}}}
-
-% Solution with credit (typewriter)
-\newcommand{\solctt}[2]{
-\noindent\textbf{Solution by \href{#1}{\texttt{#2}}.}
-}
-
-% Solution with credit (italic)
-\newcommand{\solcit}[2]{
-\noindent\textbf{Solution by \href{#1}{\textit{#2}}.}
-}
-
-% -- CASES --
-
+% Cases
 \NewDocumentCommand{\case}{g o}{\textit{Case #1}\IfNoValueTF{#2}{.}{: \textit{#2}.}}
 
-% -- SUBCASES
-
+% Subcases
 \NewDocumentCommand{\subcase}{g o}{\textit{Subcase #1}\IfNoValueTF{#2}{.}{: \textit{#2}.}}
 
-% \end{Solutions, Cases and Subcases}
+% \end{Cases and Subcases}
 
 % \begin{Theorem Environments}
 
@@ -98,33 +81,26 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{propcount}{Count}
 
-\newtheorem{claiminner}{Claim}
-\newenvironment{claim}[1]{%
-  \IfBlankTF{#1}
-    {\renewcommand{\theclaiminner}{\unskip}}
-    {\renewcommand\theclaiminner{#1}}%
-  \claiminner
-}{\endclaiminner}
-
-\theoremstyle{definition}
-\newtheorem*{definition}{Definition}
-
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
 % \end{Theorem Environments}
 
-% \begin{Question Callout}
+% \begin{Questions, Solutions, Claims and Cases}
 
 \mdfdefinestyle{mdbluebox}{%
     roundcorner=10pt,
-    linewidth=1pt,
+    linewidth=2pt,
     skipabove=12pt,
     innerbottommargin=9pt,
     skipbelow=2pt,
     linecolor=RoyalBlue,
     nobreak=true,
     backgroundcolor=TealBlue!5,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
 }
 \declaretheoremstyle[
     headfont=\sffamily\bfseries\color{MidnightBlue},
@@ -134,36 +110,53 @@
     notebraces={\hfill[Ans: }{]},
 ]{thmbluebox}
 
-% Question environment
 \declaretheorem[style=thmbluebox,name=Question,sibling=theorem]{question}
 \counterwithin*{question}{subsection}
 
-% \end{Question Callout}
+% Vanilla solution
+\theoremstyle{definition}
+\newtheorem{solution}{Solution}
+\counterwithin*{solution}{question}
+\newtheorem*{solution*}{Solution}
+
+% Add credits
+\newcommand{\credit}[2]{\href{#1}{#2}}
+\newcommand{\credittt}[2]{\href{#1}{\texttt{#2}}}
+
+\theoremstyle{plain}
+\newtheorem{claim}{Claim}
+\counterwithin*{claim}{solution}
+\newtheorem*{claim*}{Claim}
+
+% \end{Questions, Solutions, Claims and Cases}
 
 % \begin{Resource Boxes}
+\mdfdefinestyle{mdgreenbox}{%
+  skipabove=8pt,
+  skipbelow=0pt,
+  linewidth=1pt,
+  linecolor=ForestGreen,
+  backgroundcolor=ForestGreen!5,
+}
+\declaretheoremstyle[
+  headfont=\bfseries\sffamily\color{ForestGreen!70!black},
+  bodyfont=\normalfont,
+  spaceabove=2pt,
+  spacebelow=1pt,
+  mdframed={style=mdgreenbox},
+  headpunct={:},
+]{thmgreenbox}
+
+\declaretheorem[style=thmgreenbox,name=Resources,numbered=no]{resources}
 
 % Colours a hyperlink
 \newcommand{\hrefcolor}[3][black]{\href{#2}{\color{#1}{#3}}}%
 
-% Creates a resource for a paper (e.g. reviews by Way Tan)
-\newcommand{\resp}[1]{
-\noindent
-\adjustbox{right}{
-\fcolorbox{red}{red!20}{\centering \sffamily #1}
-}}
+% Resource link
+\newcommand{\res}[3][ForestGreen!70!black]{\hrefcolor[#1]{#2}{#3}}
 
-% \resp with a coloured hyperlink
-\newcommand{\resph}[3][Red]{\resp{\hrefcolor[#1]{#2}{#3}}}
-
-% Creates a resource for a question (e.g. AoPS threads)
-\newcommand{\resq}[1]{
-\noindent
-\adjustbox{right}{
-\fcolorbox{ForestGreen}{ForestGreen!5}{\centering \sffamily #1}
-}\medbreak}
-
-% \resq with a coloured hyperlink
-\newcommand{\resqh}[3][ForestGreen]{\resq{\hrefcolor[#1]{#2}{#3}}}
+% Resource link, with italicised text
+\newcommand{\resit}[3][ForestGreen!70!black]{\hrefcolor[#1]{#2}{\textit{#3}}}
 
 % \end{Resource Boxes}
 
