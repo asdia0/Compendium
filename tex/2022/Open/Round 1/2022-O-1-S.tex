@@ -4,21 +4,21 @@
     Review by \resit{https://www.youtube.com/watch?v=42LFCwMgTwQ}{Way Tan}
 \end{resources}
 
-\begin{question}[4043]\label{A::2022-O-1-1}
+\begin{question}[4043]\label{Q::2022-O-1-1}
     If $S = \displaystyle\sum_{k = -2021}^{2021} \frac{1}{10^k + 1}$, find $\floor{2S}$.
 \end{question}
 \begin{solution*}
     Observe that $\frac{1}{10^{-k} + 1} = \frac{10^k}{10^{k} + 1}$. The $-k$th term can thus be paired with the $k$th term to form $\frac{10^k + 1}{10^k + 1} = 1$, with the $0$th term being the only unpaired term. The sum hence evaluates to \[S = 2021 + \frac{1}{10^0 + 1} \implies \floor{2S} = 4043.\]
 \end{solution*}
 
-\begin{question}[1303]\label{A::2022-O-1-2}
+\begin{question}[1303]\label{Q::2022-O-1-2}
     All the positive integers $1, 2, 3, 4, \cdots,$ are grouped in the following way: $G_1 = \bc{1, 2}$, $G_2 = \bc{3, 4, 5, 6}$, $G_3 = \bc{7, 8, 9, 10, 11, 12, 13, 14}$, that is, the set $G_n$ contains the next $2^n$ positive integers listed in ascending order after the set $G_{n-1}$, $n > 1$. If $S$ is the sum of all the positive integers from $G_1$ to $G_8$, find $\floor{\frac{S}{100}}$.
 \end{question}
 \begin{solution*}
     It is not too hard to show that the last term in $G_n$ is $2^{n+1} - 2$. The last term of $G_8$ is hence $2^9 - 2 = 510$, whence $S$ evaluates to $510(511)/2$. Thus, $\floor{S/100} = 1303$.
 \end{solution*}
 
-\begin{question}[100]\label{A::2022-O-1-3}
+\begin{question}[100]\label{Q::2022-O-1-3}
     A sequence of one hundred positive integers $x_1, x_2, x_3, \cdots, x_{100}$ are such that \[(x_1)^2 + (2x_2)^2 + (3x_3)^2 + (4x_4)^2 + \cdots + (100x_{100})^2 = 338350.\] Find the largest possible value of $x_1 + x_2 + x_3 + \cdots + x_{100}$.
 \end{question}
 \begin{solution*}
@@ -26,14 +26,14 @@
 \end{solution*}
 
 \clearpage
-\begin{question}[9]\label{A::2022-O-1-4}
+\begin{question}[9]\label{Q::2022-O-1-4}
     Let $a$ and $b$ be two real numbers satisfying $a < b$, and such that for each real number $m$ satisfying $a < m < b$, the circle $x^2 + (y-m)^2 = 25$ meets the parabola $4y = x^2$ at four distinct points in the Cartesian plane. Let $S$ be the maximum possible value of $b-a$. Find $\floor{4S}$.
 \end{question}
 \begin{solution*}
     Note that $a$ is clearly $5$. Now consider the extreme case where $m > 5$ and the circle is tangent to the parabola. The discriminant of the quadratic $4y + (y-m)^2 = 25$ must be 0, whence $m = 29/4$. Hence, $S = b - a = 29/4 - 5 = 9/4$. Thus, $\floor{4S} = 9$.
 \end{solution*}
 
-\begin{question}[11]\label{A::2022-O-1-5}
+\begin{question}[11]\label{Q::2022-O-1-5}
     Let $P$ be a point within a rectangle $ABCD$ such that $PA = 10$, $PB = 14$ and $PD = 5$, as shown below. Find $\floor{PC}$.
     
     \begin{center}
@@ -62,7 +62,7 @@
     By the British flag theorem, one has $10^2 + PC^2 = 5^2 + 14^2$, whence $\floor{PC} = 11$.
 \end{solution*}
 
-\begin{question}[50]\label{A::2022-O-1-6}
+\begin{question}[50]\label{Q::2022-O-1-6}
     In the diagram below, the rectangle $ABCD$ has area 180 and both triangles $ABE$ and $ADF$ have areas 60. Find the area of triangle $AEF$.
 
     \begin{center}
@@ -88,21 +88,21 @@
     Let $BE = x$ and $DF = y$. Observe that $x/(x+EC) = [ABE]/[ABC] = 60/90 = 2/3$. Hence, $EC = x/2$. Similarly, $y/(y+FC) = [ADF]/[ADC] = 60/90 = 2/3$, whence $FC = y/2$. Thus, $[CEF] = [CDE]/3 = [ABE]/6 = 10$. Finally, $[AEF] = 180 - 60 - 60 - 10 = 50$.
 \end{solution*}
 
-\begin{question}[144]\label{A::2022-O-1-7}
+\begin{question}[144]\label{Q::2022-O-1-7}
     A tetrahedron in $\RR^3$ has one vertex at the origin $O$ and other vertices at the points $A(6, 0, 0)$, $B(4, 2, 4)$ and $C(3, 2, 6)$. If $x$ is the height of the tetrahedron from $O$ to the plane $ABC$, find $\floor{5x^2}$.
 \end{question}
 \begin{solution*}
     The plane $ABC$ is given by the vector equation $\vec r \dotp (2, 0, 1) = 12$. Since $x$ is the perpendicular distance from $O$ to $ABC$, we have $x = 12/{\sqrt{2^2 + 0^2 + 1^2}} = 12/\sqrt5$. Thus, $\floor{5x^2} = 144$.
 \end{solution*}
 
-\begin{question}[208]\label{A::2022-O-1-8}
+\begin{question}[208]\label{Q::2022-O-1-8}
     Let $x$ and $y$ be real numbers such that $(x-2)^2 + (y-3)^2 = 4$. If $S$ is the largest possible value of $x^2 + y^2$, find $\floor{(S-17)^2}$.
 \end{question}
 \begin{solution*}
     Observe that $(x-2)^2 + (y-3)^2 = 4$ describes a circle with centre $(2, 3)$ and radius 2, while $S$ is the square of the distance from some point $P$ on the circle to the origin. The largest distance clearly occurs when the origin, the centre $(2, 3)$, and $P$ are collinear. This distance can be calculated as $\sqrt{2^2 + 3^2} + 2 = \sqrt{13} + 2$. Hence, \[\floor{(S-17)^2} = \floor{\bp{(\sqrt{13} + 2)^2 - 17}^2} = 208.\]
 \end{solution*}
 
-\begin{question}[18]\label{A::2022-O-1-9}
+\begin{question}[18]\label{Q::2022-O-1-9}
     Let $S$ be the maximum value of $w^3 - 3w$ subject to the condition that $w^4 + 9 \leq 10w^2$. Find $\floor{S}$.
 \end{question}
 \begin{solution*}
@@ -110,7 +110,7 @@
 \end{solution*}
 
 \clearpage
-\begin{question}[40]\label{A::2022-O-1-10}
+\begin{question}[40]\label{Q::2022-O-1-10}
     In the quadrilateral $ABCD$ below, it is given that $AB = BC = CD$ and $\angle ABC = 80\deg$ and $\angle BCD = 160 \deg$. Suppose $\angle ADC = x\deg$. Find the value of $x$.
 
     \begin{center}
@@ -155,7 +155,7 @@
     Let $E$ be such that $\triangle BCE$ is equilateral, as shown above. Note that $\triangle ABE$ is isosceles. Since $\angle ABE = 80\deg + 60 \deg = 140 \deg$, we have $\angle BAE = \angle BEA = 20\deg$. Hence, $\angle AED = 60\deg - 20\deg = 40\deg$. However, notice that $\triangle DCE$ is also isosceles, and reflex $\angle CDE = 360\deg - 60\deg - 160\deg = 140\deg$. Thus, $\angle CED = \angle CDE = 20 \deg$, whence $\triangle ABE \equiv \triangle DCE$, implying $AE = DE$. Because $\angle AED = 40\deg + 20\deg = 60\deg$, it follows that $\triangle AED$ is equilateral, thus giving $x\deg = 60\deg - 20\deg = 40\deg$. 
 \end{solution*}
 
-\begin{question}[544]\label{A::2022-O-1-11}
+\begin{question}[544]\label{Q::2022-O-1-11}
     Let $a$, $b$, $c$ be integers with $ab + c = 49$ and $a + bc = 50$. Find the largest possible value of $abc$.
 \end{question}
 \begin{solution*}
@@ -168,7 +168,7 @@
     The largest possible value of $abc$ is thus 544.
 \end{solution*}
 
-\begin{question}[17]\label{A::2022-O-1-12}
+\begin{question}[17]\label{Q::2022-O-1-12}
     Find the largest possible value of $\abs a + \abs b$, where $a$ and $b$ are coprime integers (i.e., $a$ and $b$ are integers which have no common factors larger than 1) such that $\frac{a}{b}$ is a solution of the equation below: \[\sqrt{4x + 5 - 4\sqrt{x+1}} + \sqrt{x+2 - 2\sqrt{x+1}} = 1.\]
 \end{question}
 \begin{solution*}
@@ -185,7 +185,7 @@
     The maximum value of $\abs a + \abs b$ is 17.
 \end{solution*}
 
-\begin{question}[3000]\label{A::2022-O-1-13}
+\begin{question}[3000]\label{Q::2022-O-1-13}
     Let $S$ be the set of real solutions $(x, y, z)$ of the following system of equations: \[\left\{
         \begin{aligned}
             \frac{4x^2}{1 + 4x^2} = y,\\
@@ -203,14 +203,14 @@
 \end{solution*}
 
 \clearpage
-\begin{question}[11]\label{A::2022-O-1-14}
+\begin{question}[11]\label{Q::2022-O-1-14}
     Assume that $t$ is a positive solution to the equation \[t = \sqrt{1 + \sqrt{1 + \sqrt{1 + \sqrt{1 + t}}}}.\] Determine the value of $t^4 - t^3 - t + 10$.
 \end{question}
 \begin{solution*}
     Observe that $t = \sqrt{1 + t}$. It follows that $t^2 - t - 1 = 0$, whence $t$ is the golden ratio $\vf$, which has the property that $\vf^n = \vf^{n-1} + \vf^{n-2}$ for all integers $n$. The desired value is hence \[t^4 - t^3 - t + 10 = t^2 - t + 10 = 1 + 10 = 11.\]
 \end{solution*}
 
-\begin{question}[44]\label{A::2022-O-1-15}
+\begin{question}[44]\label{Q::2022-O-1-15}
     In the triangle $ABC$ shown in the diagram below, the external angle bisectors of $\angle B$ and $\angle C$ meet at the point $D$. The tangent from $D$ to the incircle $\o$ of the triangle $ABC$ touches $\o$ at $E$, where $E$ and $B$ are on the same side of the line $AD$. Suppose $\angle BEC = 112\deg$. Find the size of $\angle A$ in degrees.
 
     \begin{center}
@@ -273,7 +273,7 @@
     Let $I$ be the incentre of $\triangle ABC$. Observe that $BI$ and $IC$ bisect $\angle B$ and $\angle C$ respectively. Hence, $\angle IBD = \angle ICD = 90\deg$. Furthermore, since $ED$ is tangent to $\o$, we have $\angle IED = 90\deg$. Thus, $B$, $C$, $D$, $E$ and $I$ are concyclic, with $ID$ as the diameter. Hence, $\angle BIC = \angle BEC = 112\deg$. Since $IB$ and $IC$ are angle bisectors, we have \[\angle B + \angle C = 2 \bp{\angle IBC + \angle ICB} = 2 \bp{180\deg - 112\deg} = 136\deg.\] It immediately follows that $\angle A = 180\deg - 136\deg = 44\deg$.
 \end{solution*}
 
-\begin{question}[99]\label{A::2022-O-1-16}
+\begin{question}[99]\label{Q::2022-O-1-16}
     Find the largest integer $n$ such that $n^2 + 5n - 9486 = 10s(n)$, where $s(n)$ is the product of all digits of $n$ in the decimal representation of $n$.
     
     \noindent (For example, $s(481) = 4 \times 8 \times 1 = 32.$)
@@ -282,7 +282,7 @@
     Observe that $s(n) \leq n$ for all $n$. We thus have the inequality $n^2 + 5n - 9486 \leq 10 n$, whence it is clear that the largest possible $n$ is 99, which does indeed satisfy the given equality. Hence, $\max n = 99$.
 \end{solution*}
 
-\begin{question}[8]\label{A::2022-O-1-17}
+\begin{question}[8]\label{Q::2022-O-1-17}
     Find the number of integer solutions to the equation $19x + 93y = 4xy$.
 \end{question}
 \begin{solution*}
@@ -295,14 +295,14 @@
     Altogether, there are $6 + 2 = 8$ possibilities, thus there are 8 integer solutions to the given equation.
 \end{solution*}
 
-\begin{question}[121]\label{A::2022-O-1-18}
+\begin{question}[121]\label{Q::2022-O-1-18}
     Find the number of integer solutions to the equation $x_1 + x_2 - x_3 = 20$ with $x_1 \geq x_2 \geq x_3 \geq 0$.
 \end{question}
 \begin{solution*}
     Rewriting the equation, we have $x_1 + x_2 = 20 + x_3$. Suppose $x_3$ is fixed (and admits possible values of $x_2$ and $x_1$). Observe that $x_1 \leq 20$, with equality only when $x_2 = x_3$. The only possible values of $x_1$ are hence $\bc{20, 19, 18, \cdots, x_2}$. However, since $x_1 \geq x_2$, we have the condition $x_2 \leq \floor{\frac12 (20 + x_3)}$. The number of solutions for a given $x_3$ is hence $11 - \floor{\frac12 x_3}$. The total number of integer solutions is thus \[11 + 10 + 10 + 9 + 9 + \cdots + 1 + 1 = 11 + 2 \cdot \frac{10 \cdot 11}{2} = 121.\]
 \end{solution*}
 
-\begin{question}[2]\label{A::2022-O-1-19}
+\begin{question}[2]\label{Q::2022-O-1-19}
     In the diagram below, $E$ is a point outside a square $ABCD$ such that $CE$ is parallel to $BD$, $BE = BD$, and $BE$ intersects $CD$ at $H$. Given $BE = \sqrt6 + \sqrt2$, find the length of $DH$.
 
     \begin{center}
@@ -332,7 +332,7 @@
 \end{solution}
 
 \clearpage
-\begin{question}[4]\label{A::2022-O-1-20}
+\begin{question}[4]\label{Q::2022-O-1-20}
     The diagram below shows the region $R = \bc{(x, y) \in \RR^2 | y \geq \frac12 x^2}$ on the $xy$-plane bounded by the parabola $y = \frac12 x^2$. Let $C_1$ be the largest circle lying inside $R$ with its lowest point at the origin. Let $C_2$ be the largest circle lying inside $R$ and resting on top of $C_1$. Find the sum of radii of $C_1$ and $C_2$.
     
     \begin{center}
@@ -375,14 +375,14 @@
     \right.\] This gives $y^2 - 2y(1 + r_2) + 4(1 + r_2) = 0$. By symmetry, the two curves intersect at a unique $y$-value, hence the discriminant is 0. We hence obtain $4(1+r_2)^2 - 16(1+r_2) = 0$, whence $r_2 = 3$. The required sum is thus $1 + 3 = 4$.
 \end{solution*}
 
-\begin{question}[30]\label{A::2022-O-1-21}
+\begin{question}[30]\label{Q::2022-O-1-21}
     Find the smallest positive integer $x$ such that $3x^2 + x = 4y^2 + y$ for some positive integer $y$.
 \end{question}
 \begin{solution*}
     Completing the square, one gets \[4(6x+1)^2 - 4 = 3(8y+1)^2 - 3\] after simplification. This can be rewritten as \[(12x+2)^2 - 3(8y+1)^2 = 1,\] which one may recognize as a case of Pell's equation. We hence consider the equation $X^2 - 3Y^2 = 1$. The fundamental solution is clearly $X = 2$ and $Y = 1$. We now have the following standard recurrence relations for $X$ and $Y$: \[X_{k+1} = 2X_k + 3Y_k, \quad Y_{k+1} = 2Y_k + X_k.\] Keeping in mind that $X$ is of the form $12x + 2$ and $Y$ is of the form $8y +1$, the first valid solution occurs when $k = 5$, where $X = 362$ and $Y = 209$, which corresponds to $x = 30$ and $y = 26$.
 \end{solution*}
 
-\begin{question}[200]\label{A::2022-O-1-22}
+\begin{question}[200]\label{Q::2022-O-1-22}
     A group of students participates in some sports activities among 6 different types of sports. It is known that for each sport activity there are exactly 100 students in the group participating in it; and the union of all the sports activities participated by any two students is NOT the entire set of 6 sports activities. Determine the minimum number of students in the group.
 \end{question}
 \begin{solution*}
@@ -407,7 +407,7 @@
     Repeating the above allocation 50 times, we will have 100 students per sport. Hence, the minimum number of students is $4 \cdot 50 = 200$ as desired.
 \end{solution*}
 
-\begin{question}[29]\label{A::2022-O-1-23}
+\begin{question}[29]\label{Q::2022-O-1-23}
     Let $p$ and $q$ be positive prime integers such that $p^3 - 5p^2 - 18p = q^9 - 7q$. Determine the smallest value of $p$.
 \end{question}
 \begin{solution*}
@@ -420,14 +420,14 @@
     Hence, the smallest value of $p$ is 29.
 \end{solution*}
 
-\begin{question}[27648]\label{A::2022-O-1-24}
+\begin{question}[27648]\label{Q::2022-O-1-24}
     Given that $a$, $b$, $c$ are positive real numbers such that $a + b + c = 9$, find the maximum value of $a^2 b^3 c^4$.
 \end{question}
 \begin{solution*}
     Note that \[9 = a + b + c = \frac{a}{2} + \frac{a}{2} + \frac{b}{3} + \frac{b}{3} + \frac{b}{3} + \frac{c}{4} + \frac{c}{4} + \frac{c}{4} + \frac{c}{4}.\] By the Cauchy-Schwarz inequality, we obtain \[\frac19 \cdot 9 \geq \sqrt[9]{\frac{a^2 b^3 c^4}{2^2 3^3 4^4}}.\] Hence, the maximum value of $a^2 b^3 c^4$ is $2^2 3^3 4^4 = 27648$.
 \end{solution*}
 
-\begin{question}[2023]\label{A::2022-O-1-25}
+\begin{question}[2023]\label{Q::2022-O-1-25}
     Let $\RR^+$ be the set of all positive real numbers. Let $f : \RR^+ \to \RR^+$ be a function satisfying \[xy f(x) \big(f(y) - f(yf(x))\big) = 1\] for all $x, y \in \RR^+$. Find $f(\frac1{2022})$.
 \end{question}
 \begin{solution*}

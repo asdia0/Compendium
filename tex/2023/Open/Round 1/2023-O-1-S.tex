@@ -4,28 +4,28 @@
     Review by \resit{https://www.youtube.com/watch?v=mWaub25ruXE}{Way Tan}
 \end{resources}
 
-\begin{question}[10]\label{A::2023-O-1-1}
+\begin{question}[10]\label{Q::2023-O-1-1}
     The graph $C$ with equation $y = \dfrac{ax^2 + bx + c}{x+2}$ has an oblique asymptote with equation $y = 4x - 6$ and one of the stationary points at $x = -4$. Find the value of $a + b + c$.
 \end{question}
 \begin{solution*}
     Since $C$ has an oblique asymptote with equation $y = 4x - 6$, its equation can be written as \[C: y = 4x - 6 + \frac{d}{x+2}\] for some $d \in \RR$. Multiplying throughout by $x+2$ and comparing coefficients, we get $a = 4$, $b = 2$ and $c = -12 + d$. Differentiating and using the fact that $\derx{y}{x} = 0$ at $x = -4$ yields $d = 16$. Thus, $a + b + c = 10$.
 \end{solution*}
 
-\begin{question}[2000]\label{A::2023-O-1-2}
+\begin{question}[2000]\label{Q::2023-O-1-2}
     If $x = \dfrac{1}{1} + \dfrac{1}{1+2} + \dfrac{1}{1+2+3} + \dfrac{1}{1+2+3+4} + \cdots + \dfrac{1}{1 + 2 + 3 + \cdots + 100}$, find the value of $\floor{1010x}$.
 \end{question}
 \begin{solution*}
     Observe that the denominators are the triangular numbers. It is well known that the $n$th triangular number is given by $n(n+1)/2$. Thus, each term of $x$ is of the form $2/[n(n+1)]$, which can be written as $2/n - 2/(n+1)$ via partial fraction decomposition. $x$ is hence a telescoping sum, which evaluates to $2 - 2/101$, whence $1010x = 2020 - 20 = 2000$.
 \end{solution*}
 
-\begin{question}[7]\label{A::2023-O-1-3}
+\begin{question}[7]\label{Q::2023-O-1-3}
     The set of all possible values of $x$ for which the sum of the infinite series \[1 + \dfrac16 \bp{x^2 - 5x} + \dfrac1{6^2} \bp{x^2 - 5x}^2 + \dfrac1{6^3} \bp{x^2 - 5x}^3 + \cdots\] exists can be expressed as $(a, b) \cup (c, d)$, where $a < b < c < d$. Find $d - a$.
 \end{question}
 \begin{solution*}
     Observe that the common ratio of the given infinite series is $r = (x^2 - 5x)/6$. For the sum to exist, $\abs{r} < 1$, whence $-6 < x^2 - 5x < 6$. Since we are interested in the extreme values of $x$, we consider only the equality case. We thus obtain $x^2 - 5x = -6$ or $x^2 - 5x = 6$, which clearly has solutions $x = -1, 2, 3, 6$, giving $d - a = 6 - (-1) = 7$.
 \end{solution*}
 
-\begin{question}[2]\label{A::2023-O-1-4}
+\begin{question}[2]\label{Q::2023-O-1-4}
     Find the value of $\floor{y}$, where $y = \displaystyle\sum_{k=0}^\infty (2k+1)(0.5)^{2k}$.
     
     \noindent\textit{(Hint: Consider the series expansion of $(1 - x)^{-2}$)}
@@ -34,14 +34,14 @@
     Note that \[\frac1{1-x} = \sum_{k=0}^\infty x^k.\] Differentiating yields \[\dfrac1{(1-x)^2} = \sum_{k=0}^\infty kx^{k-1} = x^{-1} \sum_{k=0}^\infty k x^k.\] Now observe $y$ can be rewritten in terms of the above series: \[y = 2\sum_{k=0}^\infty k (1/4)^{k} + \sum_{k=0}^\infty (1/4)^k,\] from which it clearly follows that \[\floor y = \floor{\frac{2 \cdot 1/4}{(1 - 1/4)^2} + \frac1{1 - 1/4}} = 2.\]
 \end{solution*}
     
-\begin{question}[3]\label{A::2023-O-1-5}
+\begin{question}[3]\label{Q::2023-O-1-5}
     The solution of the inequality $\abs{x-1} + \abs{x+1} < ax + b$ is $-1 < x < 2$. Find the value of $\floor{a + b}$.
 \end{question}
 \begin{solution*}
     At the extreme ends of the solution interval, equality is achieved. This yields $2 = -a + b$ and $4 = 2a + b$ upon substituting $x = -1$ and $x = 2$ into the two expressions. Solving, we get $a = 2/3$ and $b = 8/3$, whence $\floor{a + b} = 3$.
 \end{solution*}
     
-\begin{question}[32]\label{A::2023-O-1-6}
+\begin{question}[32]\label{Q::2023-O-1-6}
     The equation $x^4 - 4x^2 + qx - r = 0$ has three equal roots. Find the value of $\floor{\dfrac{3q^2}{r^2}}$.
 \end{question}
 \begin{solution*}
@@ -58,28 +58,28 @@
     \end{align*}
 \end{solution*}
 
-\begin{question}[8]\label{A::2023-O-1-7}
+\begin{question}[8]\label{Q::2023-O-1-7}
     The parabolas $y = x^2 - 16x + 50$ and $x = y^2$ intersect at 4 distinct points which lie on a circle centred at $(a, b)$. Find $\abs{a - b}$.
 \end{question}
 \begin{solution*}
     From the first equation, we have $x^2 - 17x + x - y = -50$. By the second equation, this is equivalent to $x^2 - 17x + y^2 - y = -50$. Completing the square, we obtain \[\bp{x - \frac{17}2}^2 + \bp{y - \frac12}^2 = -50 + \bp{\frac{17}{2}}^2 + \bp{\frac12}^2.\] It is thus clear that $a = 17/2$ and $b = 1/2$, giving $\abs{a - b} = 8$.
 \end{solution*}
 
-\begin{question}[33]\label{A::2023-O-1-8}
+\begin{question}[33]\label{Q::2023-O-1-8}
     In the 3-dimensional Euclidean space with origin $O$ and three mutually perpendicular $x$-, $y$- and $z$-axes, two planes $x + y + 3z = 4$ and $2x - z = 6$ intersect at the line $\vec r \crossp \cveciii{-1}{a}{b} = \cveciii{-2}{c}{d}$. Find the value of $\abs{a + b + c + d}$.
 \end{question}
 \begin{solution*}
     Solving the Cartesian equations of the two planes simultaneously, we get \[\vec r = \dfrac17 \cveciii{22-\l}{7\l}{2-2\l},\] where $\l \in \RR$. Taking the cross product yields \[\dfrac17 \cveciii{-2a + \l(2a+7b)}{-2-22b + \l(2+b)}{22a+\l(7-a)} = \cveciii{-2}{c}{d}\] Since the above equation must hold for all real $\l$, we immediately get $a = 7$ and $b = -2$. It quickly follows by equating the $\hat {\vec j}$ and $\hat{\vec k}$ components of both vectors that $c = 6$ and $d = 22$, giving $\abs{a + b + c + d} = 33$.
 \end{solution*}
 
-\begin{question}[200]\label{A::2023-O-1-9}
+\begin{question}[200]\label{Q::2023-O-1-9}
     Let $x$, $y$, $z$ be real numbers with $3x + 4y + 5z = 100$. Find the minimum value of $x^2 + y^2 + z^2$.
 \end{question}
 \begin{solution*}
     Observe that $3x + 4y + 5z = 100$ describes a plane $\pi$ in 3-dimensional Euclidean space with vector equation \[\pi: \vec r \cdot \cveciii345 = 100.\] Observe also that $\min(x^2 + y^2 + z^2)$ is the square of the perpendicular distance between the origin and $\pi$. Applying the standard formula for perpendicular distance between a plane and a point, one gets \[\min(x^2 + y^2 + z^2) = \bp{\dfrac{100}{\sqrt{3^2 + 4^2 + 5^2}}}^2 = 200.\]
 \end{solution*}
 
-\begin{question}[2]\label{A::2023-O-1-10}
+\begin{question}[2]\label{Q::2023-O-1-10}
     Find the area of the region represented by the equation $\floor{x} + \floor{y} = 1$ in the region $0 \leq x < 2$.
 
     \noindent\textit{(Note: If you think that there is no area defined by the graph, enter ``0''; if you think that the area is infinite, enter ``9999''.)}
@@ -88,7 +88,7 @@
     When $x \in [0, 1)$, we have $\floor x = 0$. Thus, $\floor y = 1$, giving $y \in [1, 2)$. This is a square of area 1. Similarly, when $x \in [1, 2)$, we have $\floor x = 1$. Thus, $\floor y = 0$, giving $y \in [0, 1)$. This is another square of area 1. Hence, the total area of the region is 2.
 \end{solution*}
 
-\begin{question}[1011]\label{A::2023-O-1-11}
+\begin{question}[1011]\label{Q::2023-O-1-11}
     Let $ABC$ be a triangle satisfying the following conditions that $\angle A + \angle C = 2\angle B$, and $\dfrac1{\cos A} + \dfrac1{\cos C} = \dfrac{-\sqrt2}{\cos B}$. Determine the value of $\dfrac{2022\cos{\frac{A-C}{2}}}{\sqrt2}$.
 \end{question}
 \begin{solution}
@@ -98,14 +98,14 @@
     In order for $\frac{2022\cos{\frac{A-C}{2}}}{\sqrt2}$ to be an integer, we need $\cos{\frac{A-C}{2}}$ to be of the form $k\sqrt{2}$, where $k$ is a positive rational such that $2022k$ is an integer. It is exceedingly likely that $\frac{2022\cos{\frac{A-C}{2}}}{\sqrt2} = \frac{\sqrt2}{2}$, as it is a special value of the cosine function. The required answer is thus $\frac{2022\cdot\sqrt{2}/2}{\sqrt2} = 1011$.
 \end{solution}
 
-\begin{question}[2020]\label{A::2023-O-1-12}
+\begin{question}[2020]\label{Q::2023-O-1-12}
     Find $x$ which satisfies the following equation \[\dfrac{x-2019}{1} + \dfrac{x-2018}{2} + \dfrac{x-2017}{3} + \cdots + \dfrac{x+2}{2022} + \dfrac{x+3}{2023} = 2023.\]
 \end{question}
 \begin{solution*}
     By inspection, 2020 is clearly a solution, as there are 2023 terms and each term evaluates to 1, giving a sum of 2023 as desired.
 \end{solution*}
 
-\begin{question}[229]\label{A::2023-O-1-13}
+\begin{question}[229]\label{Q::2023-O-1-13}
     Assume that $x$ is a positive number such that $x - \frac1x = 3$ and \[\dfrac{x^{10} + x^8 + x^2 + 1}{x^{10} + x^6 + x^4 + 1} = \dfrac{m}{n},\] where $m$ and $n$ are positive integers without common factors larger than 1. Determine the value of $m + n$.
 \end{question}
 \begin{solution*}
@@ -118,21 +118,21 @@
     Now observe that \[x^3 + x^{-3} = \bp{x + x^{-1}}\bp{x^2 + x^{-2} - 1} = 10\bp{x + x^{-1}}.\] The given expression thus evaluates to \[\frac{x^4 + x^{-4}}{x^2 + x^{-2}} \cdot \frac{x+x^{-1}}{x^3+x^{-3}} = \frac{119}{11} \cdot \frac1{10} = \frac{119}{110},\] whence $m + n = 119 + 110 = 229$.
 \end{solution*}
 
-\begin{question}[24]\label{A::2023-O-1-14}
+\begin{question}[24]\label{Q::2023-O-1-14}
     Consider the set of all possible pairs $(x, y)$ of real numbers that satisfy $(x-4)^2 + (y-3)^2 = 9$. If $S$ is the largest possible value of $\dfrac{y}{x}$, find the value of $\floor{7S}$.
 \end{question}
 \begin{solution*}
     Observe that $(x-4)^2 + (y-3)^2 = 9$ describes a circle with centre $(4, 3)$ and radius 3. Also observe that $y/x$ is the gradient of the line passing through the origin and some point on the circle with coordinates $(x, y)$. The largest possible value of $y/x$ hence occurs when the line in question is tangent to the circle. Consider the simultaneous equations $(x-4)^2 + (y-3)^2 = 9$ and $S = y/x$. This combines to give $(x-4)^2 + (Sx - 3)^2 = 9$. Expanding, we have $(1+S^2)x^2 - (8+6S)x + 16 = 0$. Since the line is tangent to the circle, there is only one solution. The discriminant of the above quadratic is hence 0, giving $(8+6S)^2 - 4(1+S^2)(16) = 0$. Solving, we get $S = 24/7$, whence $\floor {7S} = 24$.
 \end{solution*}
 
-\begin{question}[46]\label{A::2023-O-1-15}
+\begin{question}[46]\label{Q::2023-O-1-15}
     Let $x$, $y$ be positive integers with $16x^2 + y^2 + 7xy \leq 2023$. Find the maximum value of $4x + y$.
 \end{question}
 \begin{solution*}
     Let $k$ be the maximum value of $4x + y$ without the restriction of $x$ and $y$ being integers. Then the line $4x + y = k$ is tangent to the elliptical region given by $16x^2 + y^2 + 7xy \leq 2023$. Equating the two gives \[16x^2 + (k-4x)^2 + 7x(k-4x) = 2023 \implies 4x^2 - kx + (k^2 - 2023) = 0.\] Setting the discriminant to 0, we get $k^2 - 16(k^2 - 2023) = 0$, whence $k^2 = 2023 \cdot 16 / 15$. Reinstating the integral restriction on $x$ and $y$, we get $k = 46$, which can indeed be achieved (e.g. $x = 5$, $y = 26$).
 \end{solution*}
 
-\begin{question}[25]\label{A::2023-O-1-16}
+\begin{question}[25]\label{Q::2023-O-1-16}
     Let $x$ be the largest real number such that \[\sqrt{x - \dfrac1x} + \sqrt{1 - \dfrac1x} = x.\] Determine the value of $(2x-1)^4$.
 \end{question}
 \begin{solution*}
@@ -144,14 +144,14 @@
     whence $(2x-1)^2 = 5$ and thus $(2x-1)^4 = 25$.
 \end{solution*}
    
-\begin{question}[64]\label{A::2023-O-1-17}
+\begin{question}[64]\label{Q::2023-O-1-17}
     Two positive integers $m$ and $n$ differ by 10 and the digits in the decimal representation of $mn$ are all equal to 9. Determine $m + n$.
 \end{question}
 \begin{solution*}
     By inspection, $999 = 27 \cdot 37$. Thus, $m + n = 27 + 37 = 64$.
 \end{solution*}
     
-\begin{question}[1]\label{A::2023-O-1-18}
+\begin{question}[1]\label{Q::2023-O-1-18}
     Let $\bc{a_n}$ be a sequence of positive numbers, and let $S_n = a_1 + a_2 + a_3 + \cdots + a_n$. For any positive integer $n$, let $b_n = \dfrac12 \bp{\dfrac{a_{n+1}}{a_n} + \dfrac{a_n}{a_{n+1}}}$. Given that $\dfrac{a_n + 2}{2} = \sqrt{2S_n}$ holds for all positive integers $n$, determine the limit $\lim_{n \to \infty} (b_1 + b_2 + \cdots + b_n - n)$.
 \end{question}
 \begin{solution*}
@@ -160,14 +160,14 @@
     $b_n$ thus simplifies to \[b_n = \frac12 \bp{\dfrac{a_{n+1}}{a_n} + \dfrac{a_n}{a_{n+1}}} = \frac12 \cdot \frac{a^2_{n+1} + a^2_n}{a_n a_{n+1}} = \frac{4n^2 + 1}{4n^2 - 1} = 1 + \frac1{2n-1} - \frac{1}{2n+1}.\] The limit in question hence telescopes to $1$.
 \end{solution*}
     
-\begin{question}[20]\label{A::2023-O-1-19}
+\begin{question}[20]\label{Q::2023-O-1-19}
     Let $ABC$ be a triangle with $AB = c$, $AC = b$ and $BC = a$, and satisfies the conditions $\tan C = \dfrac{\sin A + \sin B}{\cos A + \cos B}$, $\sin{B - A} = \cos C$ and that the area of triangle $ABC = 3 + \sqrt{3}$. Determine the value of $a^2 + c^2$.
 \end{question}
 \begin{solution*}
     By the sum-to-product formulae, we have \[\tan C = \frac{2\sin{\frac{A+B}{2}} \cos{\frac{A-B}{2}}}{2\cos{\frac{A+B}{2}} \cos{\frac{A-B}{2}}} = \tan{\tfrac{A+B}{2}}.\] Hence, $C = (A+B)/2$, implying that $\angle C = 60\deg$. Let $\angle A = 60\deg - \t$ and $\angle B = 60\deg + \t$. Then $\sin 2\t = \cos C = 1/2$, whence $\t = 15\deg$, thus $\angle A = 45\deg$ and $\angle C = 75\deg$. We now express the area of the triangle in terms of the side lengths: \[3 + \sqrt{3} = \frac12 ab \sin C = \frac12 bc \sin A = \frac12 ac \sin B.\] It quickly follows that \[\frac{a}{c} = \sqrt{\frac23}, \quad ac = \frac{2(3 + \sqrt3)}{\sin B}.\] This immediately gives us $a^2$ and $c^2$ in terms of $\sin B$: \[a^2 = \sqrt{\frac23} \cdot \frac{2(3 + \sqrt3)}{\sin B}, \quad c^2 = \sqrt{\frac32} \cdot \frac{2(3 + \sqrt3)}{\sin B}.\] Since $\sin B = \sin{30\deg + 45\deg} = \sqrt{2}(1 + \sqrt3)/4$, we finally get \[a^2 + c^2 = \frac{2(3 + \sqrt3)}{\sqrt{2}(1 + \sqrt3)/4} \bp{\sqrt{\frac23} + \sqrt{\frac32}} = 20.\]
 \end{solution*}
     
-\begin{question}\label{A::2023-O-1-20}
+\begin{question}\label{Q::2023-O-1-20}
     \textbf{[VOID]} Let $g \colon \RR \to \RR$, $g(0) = 4$ and that \[g(xy + 1) = g(x)g(y) - g(y) - x + 2023.\] Find the value of $g(2023)$.
 \end{question}
 \begin{solution*}
@@ -180,7 +180,7 @@
     Hence, $g$ does not exist, and the question is void.
 \end{solution*}
 
-\begin{question}[7]\label{A::2023-O-1-21}
+\begin{question}[7]\label{Q::2023-O-1-21}
     In the triangle $ABC$, $D$ is the midpoint of $AC$, $E$ is the midpoint of $BD$, and the lines $BA$ and $CE$ are tangent to the circumcircle of the triangle $ADE$ at $A$ and $E$ respectively. Suppose the circumradius of the triangle $AED$ is $(\frac{64}{7})^{1/4}$. Find the area of the triangle $ABC$.
 \end{question}
 \begin{center}
@@ -220,7 +220,7 @@
     Let $AD = DC = x$ and $BE = ED = y$. By the power of a point theorem, we have $BA^2 = BE \cdot BD$ and $CE^2 = CD \cdot CA$, whence \[BA = \sqrt{2}y, \quad CE = \sqrt{2}x.\] By the alternate segment theorem, we have $\angle CED = \angle EAD$ and $\angle BAE = \angle BDA$. Hence, $\triangle BAE$ is similar to $\triangle BDA$, and $\triangle CED$ is similar to $\triangle CAE$. Thus, \[\frac{BE}{BA} = \frac{AE}{DE} \implies AE = \frac{x}{\sqrt2}, \quad \frac{CD}{CE} = \frac{ED}{AE} \implies AE = \sqrt{2}y.\] It follows that $x = 2y$. Using the cosine rule on $\triangle ADE$, we obtain $\cos \angle ADE = 3/4$, whence $\sin \angle ADE = \sqrt{7}/4$. By the extended sine rule, \[\frac{\sqrt{2}y}{\sqrt{7}/{4}} = 2\bp{\frac{64}{7}}^{1/4} \implies y = 7^{1/4}.\] We finally get \[[ABC] = 2[ABD] = 4[AED] = 4 \bp{\frac12 \cdot 2y \cdot y \cdot \sin \angle ADE} = 7.\]
 \end{solution*}
 
-\begin{question}[48]\label{A::2023-O-1-22}
+\begin{question}[48]\label{Q::2023-O-1-22}
     $ABCD$ is a parallelogram such that $\angle ABC < 90\deg$ and $\sin \angle ABC = \frac45$. The point $K$ is on the extension of $BC$ such that $DC = DK$; the point $L$ is on the extension of $DC$ such that $BC = BL$. The bisector of $\angle CDK$ intersects the bisector of $\angle LBC$ at $Q$. Suppose the circumradius of the triangle $ABD$ is 25. Find the length of $KL$.
 \end{question}
 \begin{center}
@@ -268,21 +268,21 @@
 \end{solution*}
 
 \clearpage
-\begin{question}[7]\label{A::2023-O-1-23}
+\begin{question}[7]\label{Q::2023-O-1-23}
     A group of 200 monkeys is given the task of picking up all 3000 peanuts on the ground. Determine the maximum number $k$ such that there must be $k$ monkeys picking up the same number of peanuts. (It is possible that some lazy monkeys may not pick up any peanuts at all).
 \end{question}
 \begin{solution*}
     Consider the worst-case scenario, where there are $n$ monkeys picking 0 peanuts, $n$ monkeys picking 1 peanut, etc. The total number of peanuts picked can be calculated as \[\ \underbrace{n\bp{0 + 1 + 2 + \cdots + \bp{\floor{\frac{200}{n}} - 1}}}_{\text{$n\floor{200/n}$ monkeys}} + \underbrace{\floor{\frac{200}{n}} + \bp{\floor{\frac{200}{k}} + 1} + \cdots}_{\text{remaining monkeys}}.\] The smallest value of $n$ where the above expression is less than 3000 is $7$. Hence, $k = 7$.
 \end{solution*}
 
-\begin{question}[7]\label{A::2023-O-1-24}
+\begin{question}[7]\label{Q::2023-O-1-24}
     A chain of $n$ identical circles $C_1, C_2, \ldots, C_n$ of equal radii and centres on the $x$-axis lie inside the ellipse $E: \frac{x^2}{2023} + \frac{y^2}{333} = 1$ such that $C_1$ is tangent to $E$ internally at $(-\sqrt{2023}, 0)$, $C_n$ is tangent to $E$ internally at $(\sqrt{2023}, 0)$, and $C_i$ is tangent to $C_{i+1}$ externally for $i = 1, \ldots , n-1$. Determine the smallest possible value of $n$.
 \end{question}
 \begin{solution*}
     The curvature $\k$ of an ellipse $x^2/a^2 + y^2/b^2 = 1$ is given by \[\k(\t) = \frac{ab}{\bp{a^2\sin^2\t + b^2\cos^2\t}^{3/2}}.\] Taking $a^2 = 2023$, $b^2 = 333$ and $\t = 0$, we have that the curvature of $E$ at $(\sqrt{2023}, 0)$ is $\sqrt{2023}/333$. The maximum radius of $C_n$ is thus $333/\sqrt{2023}$ (since $\k = 1/R$). It immediately follows that \[\min n = \ceil{\frac{2\sqrt{2023}}{2 \cdot 333/\sqrt{2023}}} = 7.\]
 \end{solution*}
     
-\begin{question}[6]\label{A::2023-O-1-25}
+\begin{question}[6]\label{Q::2023-O-1-25}
     Let $p > 2023$ be a prime. Determine the number of positive integers $n$ such that $(n-p)^2 + 2023(2023 - 2n - 2p)$ is a perfect square.
 \end{question}
 \begin{solution*}

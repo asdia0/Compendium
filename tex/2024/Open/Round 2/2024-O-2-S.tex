@@ -4,7 +4,7 @@
     Review by \resit{https://www.youtube.com/watch?v=0MPzDde9pgU}{Way Tan}, Review by \resit{https://simoxmenblog.blogspot.com/2024/06/smo-open-2024-speedrun.html}{Glen Lim}, \res{https://artofproblemsolving.com/community/c3938457_2024_singapore_mo_open}{AoPS threads}
 \end{resources}
 
-\begin{question}\label{A::2024-O-2-1}
+\begin{question}\label{Q::2024-O-2-1}
     In triangle $ABC$, $\angle B = 90\deg$, $AB > BC$, and $P$ is the point such that $BP = BC$ and $\angle APB = 90\deg$, where $P$ and $C$ lie on the same side of $AB$. Let $Q$ be the point on $AB$ such that $AP = AQ$, and let $M$ be the midpoint of $QC$. Prove that the line through $M$ parallel to $AP$ passes through the midpoint of $AB$.
 \end{question}
 \begin{center}
@@ -45,7 +45,7 @@
     \remark{The condition $AB > BC$ is equivalent to $a > 1$, which is crucial in ensuring that $\sqrt{a^2 - 1}$ remains real.}
 \end{solution*}
 
-\begin{question}[$\frac12 n{(n+1)}$]\label{A::2024-O-2-2}
+\begin{question}[$\frac12 n{(n+1)}$]\label{Q::2024-O-2-2}
     Let $n$ be a fixed positive integer. Find the minimum value of \[\frac{x_1^3 + \cdots + x_n^3}{x_1 + \cdots + x_n}\] where $x_1, x_2, \ldots, x_n$ are distinct positive integers.
 \end{question}
 \begin{solution*}[\credittt{https://artofproblemsolving.com/community/c6h3371489p31383129}{KHOMNYO2}]
@@ -60,7 +60,7 @@
     Applying our newly-established inequality to the problem at hand, we see that \[\frac{x_1^3 + \cdots + x_n^3}{x_1 + \cdots + x_n} \geq \frac{\bp{x_1 + \cdots + x_n}^2}{x_1 + \cdots + x_n} \geq x_1 + \cdots + x_n \geq 1 + \cdots + n = \frac{n(n+1)}2.\]    
 \end{solution*}
 
-\begin{question}\label{A::2024-O-2-3}
+\begin{question}\label{Q::2024-O-2-3}
     Prove that for every positive integer $n$ there exists an $n$-digit number divisible by $5^n$ all of whose digits are odd.
 \end{question}
 \begin{solution*}
@@ -69,7 +69,7 @@
     Observe that $s \cdot 10^k + a_k = 5^k \bp{s \cdot 2^k + m}$. Recall that $2^k$ can only end with a 2, 4, 6, or 8 in base 10. Hence, the only residues $2^k$ can take on modulo 5 are 1, 2, 3, and 4. Meanwhile, $s$ can take on any residue modulo 5. It is thus obvious that $s \cdot 2^k$ can take on any residue modulo 5. Hence, by picking $s \equiv -m \pmod{5}$, we will have $5^{k+1} \mid 5^k \bp{s \cdot 2^k + m}$ as desired. This closes the induction. \qed
 \end{solution*}
 
-\begin{question}[$n+1$]\label{A::2024-O-2-4}
+\begin{question}[$n+1$]\label{Q::2024-O-2-4}
     Alice and Bob play a game. Bob starts by picking a set $S$ consisting of $M$ vectors of length $n$ with entries either 0 or 1. Alice picks a sequence of numbers $y_1 \leq y_2 \leq \cdots \leq y_n$ from the interval $[0, 1]$, and a choice of real numbers $x_1, x_2, \ldots, x_n \in \RR$. Bob wins if he can pick a vector $(z_1, z_2, \ldots, z_n) \in S$ such that \[\sum_{i=1}^n x_i y_i \leq \sum_{i=1}^n x_i z_i,\] otherwise Alice wins. Determine the minimum value of $M$ so that Bob can guarantee a win.
 \end{question}
 \begin{solution*}[\credittt{https://simoxmenblog.blogspot.com/2024/09/behind-scenes-of-smo-q4-part-1-proposal.html}{DVDthe1st}]
@@ -78,7 +78,7 @@
     Suppose there exists some $\vec v_i \notin S$. Alice can capitalize on this by picking \[\vec x = (\underbrace{-1, \ldots, -1}_{i}, \underbrace{1, \ldots, 1}_{n-i}) \text{ and } \vec y = \vec v_i.\] This is because $\vec x \dotp \vec y$ attains its maximum only when $\vec y = \vec v_i$. Hence, Bob can only win by choosing $\vec z = \vec v_i$. But because $\vec v_i \notin S$, he cannot do so and will thus lose.
 \end{solution*}
 
-\begin{question}[$p+1$]\label{A::2024-O-2-5}
+\begin{question}[$p+1$]\label{Q::2024-O-2-5}
     Let $p$ be a prime number. Determine the largest possible $n$ such that the following holds: it is possible to fill an $n \times n$ table with integers $a_{ik}$ in the $i$th row and $k$th column, for $1 \leq i, k \leq n$, such that for any quadruple $i$, $j$, $k$, $l$ with $1 \leq i < j \leq n$ and $1 \leq k < l \leq n$, the number $a_{ik}a_{jl} - a_{il}a_{jk}$ is not divisible by $p$.
 \end{question}
 \begin{solution*}[\credit{https://simoxmenblog.blogspot.com/2024/06/smo-open-2024-speedrun.html}{Glen Lim}]

@@ -4,7 +4,7 @@
     Review by \resit{https://www.youtube.com/watch?v=Mrjm7aWXoNQ}{Way Tan}, \res{https://artofproblemsolving.com/community/c3938466_2024_singapore_senior_math_olympiad}{AoPS threads}
 \end{resources}
 
-\begin{question}\label{A::2024-S-2-1}
+\begin{question}\label{Q::2024-S-2-1}
     In an acute triangle $ABC$, $AC > AB$, $D$ is the point on $BC$ such that $AD = AB$. Let $\o_1$ be the circle through $C$ tangent to $AD$ at $D$, and $\o_2$ the circle through $C$ tangent to $AB$ at $B$. Let $F$ ($\neq C$) be the second intersection of $\o_1$ and $\o_2$. Prove that $F$ lies on $AC$.
 \end{question}
 \begin{center}
@@ -60,14 +60,14 @@
     Note that $F$ and $C$ obviously lie on the radical axis of $\o_1$ and $\o_2$. Observe that the power of $A$ with respect to $\o_1$ and $\o_2$ is $AD^2$ and $AB^2$ respectively. However, because $AD = AB$, the two powers are equal, whence $A$ also lies on the radical axis. Thus, $F$ lies on $AC$. \qed
 \end{solution}
 
-\begin{question}[${(-17, -130), (-17, 128), (7, -130), (7, 128)}$]\label{A::2024-S-2-2}
+\begin{question}[${(-17, -130), (-17, 128), (7, -130), (7, 128)}$]\label{Q::2024-S-2-2}
     Find all integer solutions of the equation \[y^2 + 2y = x^4 + 20x^3 + 104x^2 + 40x + 2003.\]
 \end{question}
 \begin{solution*}
     Completing the square, we have \[(y + 1)^2 - (x^2 + 10x + 2)^2 = 2000,\] which factors as \[(y + x^2 + 10x + 3)(y - x^2 - 10x - 1) = 2000.\] Let $A = y + x^2 + 10x + 3$ and $B = y - x^2 - 10x - 1$. We clearly have \[\frac{A + B}{2} = y + 1 \implies y = \frac{A + B}{2} - 1\] and \[\frac{A - B}{2} = x^2 + 10x + 2 = (x+5)^2 - 23 \implies (x+5)^2 = \frac{A-B}{2} + 23 \tag{1}.\] Going through all possible factor pairs of 2000, we see that only \[(a, b) \in \bc{(-8, -250), (250, 8)}\] gives a perfect square as in (1). Thus, \[(x, y) \in \bc{(-17, -130), (-17, 128), (7, -130), (7, 128)}.\]
 \end{solution*}
 
-\begin{question}[11]\label{A::2024-S-2-3}
+\begin{question}[11]\label{Q::2024-S-2-3}
     Find the smallest positive integer $n$ for which there exist integers $x_1 < x_2 < \cdots < x_n$ such that every integer from 1000 to 2000 can be written as a sum of some of the integers from $x_1, x_2, \ldots, x_n$ without repetition.
 \end{question}
 \begin{solution*}[\credittt{https://artofproblemsolving.com/community/c6h3344168p30996552}{joeym2011}]
@@ -78,7 +78,7 @@
     It is trivial to see that $n = 11$ is possible: simply take $x_i = 2^{i-1}$ and look at the binary expansion of each integer between 1000 and 2000 to determine what $x_i$'s to sum. Hence, $\min n = 11$.
 \end{solution*}
 
-\begin{question}\label{A::2024-S-2-4}
+\begin{question}\label{Q::2024-S-2-4}
     Suppose $p$ is a prime number and $x$, $y$, $z$ are integers satisfying $0 < x < y < z < p$. If $x^3$, $y^3$, $z^3$ have equal remainders when divided by $p$, prove that $x^2 + y^2 + z^2$ is divisible by $x + y + z$.
 \end{question}
 
@@ -86,9 +86,9 @@
     We have $y^3 - x^3 \equiv z^3 - x^3 \equiv 0 \pmod{p}$. By the difference of squares identity, this gives \[(y-x)(x^2 + xy + y^2) \equiv (z-x)(x^2 + xz + z^2) \equiv 0 \pmod{p}.\] However, because $y - x$ and $z - x$ are less than $p$, we have \[x^2 + xy + y^2 \equiv x^2 + xy + z^2 \equiv 0 \pmod{p}.\] Thus, \[(z-y)(x + y + z) = (x^2 + xz + x^2) - (x^2 + xy + y^2) \equiv 0 \pmod{p}.\] Once again, because $z - y$ is less than $p$, we get $x + y + z \equiv 0 \pmod{p}$. However, since $0 < x + y + z < 3p$, it follows that $x + y + z$ is either $p$ or $2p$. Now, observe that \[3(xy + yz + zx) = 2(x + y + z)^2 - (x^2 + xy + y^2) - (y^2 + yz + z^2) - (z^2 + zx + x^2) \equiv 0 \pmod{p},\] whence $xy + yz + zx \equiv 0 \pmod{p}$ since $p > 3$. Thus, $xy + yz + zx = kp$, where $k \in \ZZ^+$. Note that \[x^2 + y^2 + z^2 = (x + y + z)^2 - 2(xy + yz + zx).\] Dividing both sides by $x + y + z$, we have \[\frac{x^2 + y^2 + z^2}{x + y + z} = (x + y + z) - \frac{2(xy + yz + zx)}{x + y + z}.\] Clearly, $\frac{2(xy + yz + zx)}{x + y + z}$ must be an integer: if $x + y + z = p$, we get $2k$; if $x + y + z = 2p$, we get $k$. Thus, $\frac{x^2 + y^2 + z^2}{x + y + z}$ is an integer, whence $x^2 + y^2 + z^2$ is divisible by $x + y + z$. \qed 
 \end{solution*}
 
-\begin{question}\label{A::2024-S-2-5}
+\begin{question}\label{Q::2024-S-2-5}
     Let $a_1, a_2, \ldots$ be a sequence of positive numbers satisfying, for any positive integers $k$, $l$, $m$, $n$ such that $k + n = m + l$, \[\frac{a_k + a_n}{1 + a_k a_n} = \frac{a_m + a_l}{1 + a_m a_l}.\] Show that there exist positive numbers $b$, $c$ so that $b \leq a_n \leq c$ for any positive integer $n$.
 \end{question}
 \begin{solution*}[\credit{https://www.youtube.com/watch?v=Mrjm7aWXoNQ}{Way Tan}]
-    Taking reciprocals, we have \[\frac{1 + a_k a_n}{a_k + a_n} = \frac{1 + a_m a_l}{a_m + a_l} \iff \frac{1 + a_k + a_n + a_k a_n}{a_k + a_n} = \frac{1 + a_m + a_l + a_m a_l}{a_m + a_l}.\] The numerators factor nicely as \[\frac{(1 + a_k)(1 + a_n)}{a_k + a_n} = \frac{(1 + a_m)(1 + a_l)}{a_m + a_l}.\] Taking reciprocals once again, we arrive at the set-up of \hyperref[A::2020-O-1-19]{2020/Open/R1/Q19}: \[\frac{a_k + a_n}{(1 + a_k)(1 + a_n)} = \frac{a_m + a_l}{(1 + a_m)(1 + a_l)}.\] Letting $b_i = \frac{1}{a_i + 1} - \frac12$ as given in the hint to that question, we have after simplification, \[b_kb_n = b_m b_n.\] However, by the condition that $k + n = m + l$, we clearly have that $\bc{b_i}$ is in geometric progression. Moreover, because $a_i \in (0, \infty)$, we have $b_i \in (-\frac12, \frac12)$. Since $b_i$ is bounded, it follows that $\abs{r} \leq 1$, where $r$ is the common ratio of $\bc{b_i}$. It follows that $\abs{b_i} \leq \abs{b_1} < \frac12 $ for all positive integers $i$. Hence, $-\abs{b_1} \leq b_i \leq \abs{b_1}$, implying that \[\frac1{\frac12 + \abs{b_1}} - 1 \leq a_i \leq \frac1{\frac12-\abs{b_1}} - 1,\] whence $b = \frac1{\frac12 + \abs{b_1}} - 1$ and $c = \frac1{\frac12-\abs{b_1}} - 1$ are clearly positive, and we are done. \qed
+    Taking reciprocals, we have \[\frac{1 + a_k a_n}{a_k + a_n} = \frac{1 + a_m a_l}{a_m + a_l} \iff \frac{1 + a_k + a_n + a_k a_n}{a_k + a_n} = \frac{1 + a_m + a_l + a_m a_l}{a_m + a_l}.\] The numerators factor nicely as \[\frac{(1 + a_k)(1 + a_n)}{a_k + a_n} = \frac{(1 + a_m)(1 + a_l)}{a_m + a_l}.\] Taking reciprocals once again, we arrive at the set-up of \hyperref[Q::2020-O-1-19]{2020/Open/R1/Q19}: \[\frac{a_k + a_n}{(1 + a_k)(1 + a_n)} = \frac{a_m + a_l}{(1 + a_m)(1 + a_l)}.\] Letting $b_i = \frac{1}{a_i + 1} - \frac12$ as given in the hint to that question, we have after simplification, \[b_kb_n = b_m b_n.\] However, by the condition that $k + n = m + l$, we clearly have that $\bc{b_i}$ is in geometric progression. Moreover, because $a_i \in (0, \infty)$, we have $b_i \in (-\frac12, \frac12)$. Since $b_i$ is bounded, it follows that $\abs{r} \leq 1$, where $r$ is the common ratio of $\bc{b_i}$. It follows that $\abs{b_i} \leq \abs{b_1} < \frac12 $ for all positive integers $i$. Hence, $-\abs{b_1} \leq b_i \leq \abs{b_1}$, implying that \[\frac1{\frac12 + \abs{b_1}} - 1 \leq a_i \leq \frac1{\frac12-\abs{b_1}} - 1,\] whence $b = \frac1{\frac12 + \abs{b_1}} - 1$ and $c = \frac1{\frac12-\abs{b_1}} - 1$ are clearly positive, and we are done. \qed
 \end{solution*}
