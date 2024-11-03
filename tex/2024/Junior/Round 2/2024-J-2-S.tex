@@ -1,0 +1,79 @@
+\subsection{Round 2 Solutions}\label{S::2024-J-2}
+
+\begin{resources}
+    Review by \resit{https://www.youtube.com/watch?v=O8bi9Ejv5Io}{Way Tan}, \res{https://artofproblemsolving.com/community/c4057243_2024_singapore_junior_maths_olympiad}{AoPS threads}
+\end{resources}
+
+\begin{question}[${\sqrt{2} \sqrt{\sqrt2 - 1}}$]\label{Q::2024-J-2-1}
+    Let $ABC$ be an isosceles right-angled triangle of area 1. Find the length of the shortest segment that divides the triangle into two parts of equal area.
+\end{question}
+\begin{solution*}
+    Let $A(0, \sqrt{2})$, $B(0, 0)$ and $C(\sqrt2, 0)$. Let $DE$ be the line segment that divides $\triangle ABC$ into two regions of area $\frac12$. Without loss of generality, suppose $D \in BC$. Let $D(t, 0)$, where $t \in [0, \sqrt{2}]$.
+
+    \case{1} Suppose $E \in AB$. Then $E(0, h)$, with $h \in [0, \sqrt{2}]$. Observe that one of the regions that $DE$ splits $ABC$ into is the right-angled triangle $\triangle EBD$. We thus have \[[EBD] = \frac12 \implies \frac{th}2 = \frac12 \implies h = \frac1{t}.\] Let $s = \abs{DE}$. By the distance formula, we have $s = \sqrt{t^2 + t^{-2}}$. We now consider the stationary points of $s$: \[\der{s}{t} = 0 \implies \frac{2t - 2t^{-3}}{2\sqrt{t^2 + t^{-2}}} = 0 \implies t = 1.\] It is not too hard to show that $s$ attains a minimum when $t = 1$. We thus have \[\min \abs{DE} = \sqrt{1^2 + 1^{-2}} = \sqrt2. \tag{1}\]
+
+    \case{2} Suppose $E \in AC$. Note that the equation of the line $AC$ is $y = \sqrt2 -x$. Thus, $E(h, \sqrt2 - h)$, where $h \in [0, \sqrt2]$. Observe that one of the regions that $DE$ splits $ABC$ into is the triangle $\triangle EDC$. We thus have \[[EDC] = \frac12 \implies \frac12 \bp{\sqrt2 - t}\bp{\sqrt2 - h} = \frac12 \implies h = \sqrt2 - \frac1{\sqrt2 - t}.\] Let $s = \abs{DE}$. By the distance formula, we have \[s = \sqrt{\bp{\sqrt2 - t - \frac1{\sqrt2 - t}}^2 + \bp{\frac1{\sqrt2 - t}}^2} = \sqrt{\bp{u - u^{-1}}^2 + u^{-2}} = \sqrt{u^2 + 2u^{-2} - 2},\] where $u = \sqrt2 - t$. We now consider the stationary points of $s$: \[\der{s}{u} = 0 \implies \frac{2u - 4u^{-3}}{2\sqrt{u^2 + 2u^{-2} - 2}} = 0 \implies u = 2^{1/4},\] whence $t = \sqrt2 - 2^{1/4} \in (0, \sqrt2)$. It is not too hard to show that $s$ attains a minimum when $u = 2^{1/4}$. We thus have \[\min \abs{DE} = \sqrt{\bp{2^{1/4}}^2 + 2\bp{2^{1/4}}^{-2} - 2} = \sqrt{2}\sqrt{\sqrt{2} - 1}.\tag{2}\]
+
+    Comparing (1) and (2), we see that $\sqrt2 \sqrt{\sqrt{2} - 1} < \sqrt 2$. Thus, the shortest length of $DE$ is $\sqrt{2} \sqrt{\sqrt2 - 1}$.
+\end{solution*}
+
+\begin{question}\label{Q::2024-J-2-2}
+    Let $ABCD$ be a parallelogram and points $E$, $F$ be on its exterior. If triangles $BCF$ and $DEC$ are similar, i.e. $\triangle BCF \sim \triangle DEC$, prove that triangle $AEF$ is similar to these two triangles.
+\end{question}
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate[label=below left:$A$] (A) at (0, 0);
+        \coordinate[label=below right:$B$] (B) at (5, 0);
+        \coordinate (C) at (6, 2);
+        \coordinate[label=above left:$D$] (D) at (1, 2);
+        \coordinate[label=above:$E$] (E) at (5, 5);
+        \coordinate[label=right:$F$] (F) at (7, 1);
+
+        \draw (A) -- (B) -- (C) -- (D) -- (A);
+        \draw (D) -- (E) -- (C);
+        \draw (C) -- (F) -- (B);
+        \draw[dashed] (A) -- (E) -- (F) -- (A);
+
+        \node at (5.5, 2.3) {$C$};
+
+        \draw pic [draw, angle radius=3mm] {angle = F--C--E};
+        \draw pic [draw, angle radius=3mm] {angle = A--D--E};
+        \draw pic [draw, angle radius=3mm] {angle = F--B--A};
+    \end{tikzpicture}
+\end{center}
+\begin{solution*}
+    Let $\angle CBF = \a$ and $\angle CFB = \b$. Since $\triangle BCF$ and $\triangle DEC$ are similar, we have $\angle EDC = \a$ and $\angle ECD = \b$. Let $\angle ADC = \angle ABC = \g$. Note that $\angle ADE = \angle ABF = \a + \g$. Furthermore, observe that \[\angle ECF = 360\deg - \angle ECD - \angle DCB - \angle BCF = 360\deg - (\b) - (180\deg - \g) - (180\deg - \a - \b) = \a + \g.\] We thus have \[\angle ADE = \angle ABF = \angle ECF = \a + \g.\] Let $k$ be the ratio of similarity between $\triangle BCF$ and $\triangle DEC$. Then $EC = k\cdot CF$, $ED = k \cdot BC$ and $DC = k \cdot BF$. By the cosine rule, we can write the side lengths of $\triangle AEF$ in terms of $CF$, $BC$ and $BF$.
+    \begin{align*}
+        EF^2 &= CF^2 + k^2 CF^2 - 2k\cdot CF^2 \cos{\a + \g}\\
+        AE^2 &= BC^2 + k^2 BC^2 - 2k\cdot BC^2 \cos{\a + \g}\\
+        AF^2 &= BF^2 + k^2 BF^2 - 2k\cdot BF^2 \cos{\a + \g}
+    \end{align*}
+    This immediately gives \[\frac{EF}{CF} = \frac{AE}{BC} = \frac{AF}{BF} = \sqrt{1 + k^2 - 2k \cos{\a + \g}},\]  which is a constant. Thus, $\triangle AEF$ is similar to $\triangle BCF$. \qed
+\end{solution*}
+
+\begin{question}\label{Q::2024-J-2-3}
+    Seven triangles of area 7 lie in a square of area 27. Prove that among the 7 triangles there are 2 that intersect in a region of area not less than 1.
+\end{question}
+\begin{solution}
+    Observe that the total area covered by the triangles ($7 \cdot 7 = 49$ units$^2$) is greater than the area of the square. Hence, by the pigeonhole principle, there is a minimum overlap area of $49 - 27 = 22$ units$^2$ (accounting for multiple overlaps). However, since there are only $\binom{7}{2} = 21$ possible pairs of triangles, it again follows from the pigeonhole principle that there is one pair that overlap in an area of at least 1 unit$^2$. \qed
+\end{solution}
+
+\begin{question}[3]\label{Q::2024-J-2-4}
+    Suppose for some positive integer $n$, the numbers $2^n$ and $5^n$ have equal first digit. What are the possible values of this first digit?
+\end{question}
+\begin{solution}
+    Let the first digit of $2^n$ be $d$. Then $2^n = k \cdot 10^a$, where $k \in [d, d+1)$ and $a$ is some non-negative integer. Since $5^n = \frac{10^n}{2^n} = \frac{10}{k} 10^{n-a-1}$, we see that the first digit of $5^n$ is $\floor{\frac{10}{k}}$. Going through all possible $d = 1, \ldots, 9$, we see that $d = \floor{\frac{10}{k}}$ only when $d = 3$ and $k \in [3, 10/3)$. Thus, the only possible value for this first digit is 3.
+\end{solution}
+\begin{solution}[\credittt{https://artofproblemsolving.com/community/c6h312638p1686081}{Zhero}]
+    Let $d$ be the first digit of $2^n$ and $5^n$. Then \[d\cdot10^{m_1} \leq 2^n < (d+1) \cdot 10^{m_1}, \qquad d\cdot10^{m_2} \leq 5^n < (d+1) \cdot 10^{m_2},\]  where $m_1$ and $m_2$ are positive integers. Multiplying the two inequalities yields \[d^2 \cdot 10^{m_1 + m_2} \leq 10^n < (d+1)^2 \cdot 10^{m_1 + m_2} \implies d^2 \leq 10^{n - m_1 - m_2} < (d+1)^2.\] For $d = 1, \ldots, 9$, the only $d$ that has a perfect power of 10 between $d^2$ and $(d+1)^2$ is 3. Thus, the first digit can only be 3.
+\end{solution}
+
+\begin{question}[${(-17, -130), (-17, 128), (7, -130), (7, 128)}$]\label{Q::2024-J-2-5}
+    Find all integer solutions of the equation \[y^2 + 2y = x^4 + 20x^3 + 104x^2 + 40x + 2003.\]
+\end{question}
+\begin{remark}
+    This question is identical to \hyperref[Q::2024-S-2-2]{2024/Senior/R2/Q2}.
+\end{remark}
+\begin{solution*}
+    Completing the square, we have \[(y + 1)^2 - (x^2 + 10x + 2)^2 = 2000,\] which factors as \[(y + x^2 + 10x + 3)(y - x^2 - 10x - 1) = 2000.\] Let $A = y + x^2 + 10x + 3$ and $B = y - x^2 - 10x - 1$. We clearly have \[\frac{A + B}{2} = y + 1 \implies y = \frac{A + B}{2} - 1\] and \[\frac{A - B}{2} = x^2 + 10x + 2 = (x+5)^2 - 23 \implies (x+5)^2 = \frac{A-B}{2} + 23 \tag{1}.\] Going through all possible factor pairs of 2000, we see that only \[(a, b) \in \bc{(-8, -250), (250, 8)}\] gives a perfect square as in (1). Thus, \[(x, y) \in \bc{(-17, -130), (-17, 128), (7, -130), (7, 128)}.\]
+\end{solution*}

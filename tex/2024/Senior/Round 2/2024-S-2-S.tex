@@ -63,9 +63,9 @@
 \begin{question}[${(-17, -130), (-17, 128), (7, -130), (7, 128)}$]\label{Q::2024-S-2-2}
     Find all integer solutions of the equation \[y^2 + 2y = x^4 + 20x^3 + 104x^2 + 40x + 2003.\]
 \end{question}
-\begin{solution*}
-    Completing the square, we have \[(y + 1)^2 - (x^2 + 10x + 2)^2 = 2000,\] which factors as \[(y + x^2 + 10x + 3)(y - x^2 - 10x - 1) = 2000.\] Let $A = y + x^2 + 10x + 3$ and $B = y - x^2 - 10x - 1$. We clearly have \[\frac{A + B}{2} = y + 1 \implies y = \frac{A + B}{2} - 1\] and \[\frac{A - B}{2} = x^2 + 10x + 2 = (x+5)^2 - 23 \implies (x+5)^2 = \frac{A-B}{2} + 23 \tag{1}.\] Going through all possible factor pairs of 2000, we see that only \[(a, b) \in \bc{(-8, -250), (250, 8)}\] gives a perfect square as in (1). Thus, \[(x, y) \in \bc{(-17, -130), (-17, 128), (7, -130), (7, 128)}.\]
-\end{solution*}
+\begin{remark}
+    This question is identical to \hyperref[Q::2024-J-2-5]{2024/Junior/R2/Q5}.
+\end{remark}
 
 \begin{question}[11]\label{Q::2024-S-2-3}
     Find the smallest positive integer $n$ for which there exist integers $x_1 < x_2 < \cdots < x_n$ such that every integer from 1000 to 2000 can be written as a sum of some of the integers from $x_1, x_2, \ldots, x_n$ without repetition.
